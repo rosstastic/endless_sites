@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional nail care in the heart of Hickory Ridge — walk-ins always welcome">
+  <meta property="og:title" content="Columbia Nails">
+  <meta property="og:description" content="Professional nail care in the heart of Hickory Ridge — walk-ins always welcome">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/placeholder-hero.svg">
+  <title>Columbia Nails</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --color-primary: #6C3483;
+      --color-accent: #F1948A;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Columbia Nails</a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact" class="btn btn--accent">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────── -->
+  <section class="hero" id="hero" style="background-image: url('assets/placeholder-hero.svg');" aria-label="Columbia Nails hero">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Nail Salon · Columbia, MD</p>
+      <h1 class="hero__title">Columbia Nails</h1>
+      <p class="hero__tagline">Professional nail care in the heart of Hickory Ridge — walk-ins always welcome</p>
+      <div class="hero__cta">
+        <a href="tel:4109646411" class="btn btn--accent">Call Us: (410) 964-6411</a>
+        <a href="#about" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6);">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ───────────────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-label">About Us</span>
+          <h2>Columbia Nails</h2>
+          <p>Columbia Nails has been a trusted neighborhood nail salon in Columbia&#x27;s Hickory Ridge community for years. Our skilled technicians — including Vivian, Ann, and Katie — deliver meticulous manicures, luxurious pedicures, and expert nail enhancements in a clean, relaxing environment. Whether you&#x27;re stopping in for a quick polish change or a full spa pedicure, you&#x27;ll leave looking and feeling your best.</p>
+          
+        </div>
+        <div class="about__image">
+          <img src="assets/placeholder-hero.svg" alt="Inside Columbia Nails" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services / Menu ─────────────────────────────────── -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <span class="section-label">Services</span>
+      <h2>What We Offer</h2>
+      <div class="services__grid"><div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Classic Manicure</div><div class="service-card__desc">Nail shaping, cuticle care, and your choice of polish color</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Gel Manicure</div><div class="service-card__desc">Long-lasting gel polish that stays chip-free for weeks</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Kids Manicure</div><div class="service-card__desc">A fun nail experience sized just right for little ones</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Classic Pedicure</div><div class="service-card__desc">Foot soak, nail care, callus removal, and polish</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Spa Pedicure</div><div class="service-card__desc">Upgraded treatment with exfoliation, mask, and extended massage</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Gel Pedicure</div><div class="service-card__desc">Gel polish pedicure for long-lasting color and shine</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Acrylic Full Set</div><div class="service-card__desc">Full set of acrylic nails, shaped and finished to your preference</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Dip Powder Nails</div><div class="service-card__desc">Durable dip powder application — no UV light, odorless</div></div>
+<div class="service-card"><div class="service-card__icon">✂️</div><div class="service-card__title">Acrylic Fill</div><div class="service-card__desc">Fill-in for existing acrylic set</div></div></div>
+    </div>
+  </section>
+
+  <!-- ── Hours ───────────────────────────────────────────── -->
+  <section class="hours section" id="hours">
+    <div class="container">
+      <span class="section-label">Hours</span>
+      <h2>When We're Open</h2>
+      <div class="hours__card">
+        <div class="hours__badge" id="open-now-badge" hidden></div>
+        <table class="hours__table" aria-label="Business hours">
+          <tbody>
+            <tr><td>Monday</td><td>10:00 AM – 7:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+            <tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+            <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery ─────────────────────────────────────────── -->
+  
+
+  <!-- ── Contact ─────────────────────────────────────────── -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2>Find Us</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__address">10801 Hickory Ridge Rd,<br> Ste 102,<br> Columbia,<br> MD 21044</p>
+          <a href="tel:4109646411" class="contact__phone">(410) 964-6411</a>
+          
+          
+        </div>
+        <div class="contact__map">
+          <iframe src="https://maps.google.com/maps?q=10801+Hickory+Ridge+Rd+Columbia+MD+21044&amp;output=embed" allowfullscreen loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Columbia Nails &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const HOURS_DATA = {"monday": "10:00 AM \u2013 7:00 PM", "tuesday": "10:00 AM \u2013 7:00 PM", "wednesday": "10:00 AM \u2013 7:00 PM", "thursday": "10:00 AM \u2013 7:00 PM", "friday": "10:00 AM \u2013 7:00 PM", "saturday": "9:00 AM \u2013 5:00 PM", "sunday": "Closed"};
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

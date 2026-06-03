@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-03T23:05:41Z",
+  "milestone": {
+    "target": 5,
+    "approved": 0,
+    "in_progress": 3,
+    "abandoned": 0,
+    "last_updated": "2026-06-03T23:05:09Z"
+  },
+  "businesses": [
+    {
+      "slug": "namit-filipino-barbecue-columbia",
+      "name": "Namit Filipino Barbecue",
+      "status": "prototype",
+      "site_path": "sites/namit-filipino-barbecue-columbia/",
+      "added_at": "2026-06-03T23:03:18Z",
+      "updated_at": "2026-06-03T23:05:41Z"
+    },
+    {
+      "slug": "merriweather-cafe-deli-columbia",
+      "name": "Merriweather Cafe & Deli",
+      "status": "prototype",
+      "site_path": "sites/merriweather-cafe-deli-columbia/",
+      "added_at": "2026-06-03T23:03:21Z",
+      "updated_at": "2026-06-03T23:05:41Z"
+    },
+    {
+      "slug": "columbia-nails-hickory-ridge",
+      "name": "Columbia Nails",
+      "status": "prototype",
+      "site_path": "sites/columbia-nails-hickory-ridge/",
+      "added_at": "2026-06-03T23:03:21Z",
+      "updated_at": "2026-06-03T23:05:41Z"
+    }
+  ]
+}

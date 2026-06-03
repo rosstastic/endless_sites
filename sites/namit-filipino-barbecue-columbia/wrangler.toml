@@ -1,0 +1,6 @@
+name = "endless-namit-filipino-barbecue-columbia"
+compatibility_date = "2025-01-01"
+
+# Deploy command (run from repo root):
+#   wrangler pages deploy sites/namit-filipino-barbecue-columbia/ --project-name=endless-namit-filipino-barbecue-columbia
+# Live URL: https://endless-namit-filipino-barbecue-columbia.pages.dev

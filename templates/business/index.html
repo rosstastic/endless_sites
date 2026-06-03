@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{TAGLINE}}">
+  <meta property="og:title" content="{{BUSINESS_NAME}}">
+  <meta property="og:description" content="{{TAGLINE}}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{HERO_IMAGE_URL}}">
+  <title>{{BUSINESS_NAME}}</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --color-primary: {{COLOR_PRIMARY}};
+      --color-accent: {{COLOR_ACCENT}};
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">{{BUSINESS_NAME}}</a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">{{SERVICES_NAV_LABEL}}</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact" class="btn btn--accent">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────── -->
+  <section class="hero" id="hero" style="background-image: url('{{HERO_IMAGE_URL}}');" aria-label="{{BUSINESS_NAME}} hero">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">{{CATEGORY}} · Columbia, MD</p>
+      <h1 class="hero__title">{{BUSINESS_NAME}}</h1>
+      <p class="hero__tagline">{{TAGLINE}}</p>
+      <div class="hero__cta">
+        <a href="tel:{{PHONE}}" class="btn btn--accent">Call Us: {{PHONE_DISPLAY}}</a>
+        <a href="#about" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6);">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ───────────────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-label">About Us</span>
+          <h2>{{BUSINESS_NAME}}</h2>
+          <p>{{DESCRIPTION}}</p>
+          {{FOUNDED_BADGE_HTML}}
+        </div>
+        <div class="about__image">
+          <img src="{{ABOUT_IMAGE_URL}}" alt="Inside {{BUSINESS_NAME}}" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services / Menu ─────────────────────────────────── -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <span class="section-label">{{SERVICES_NAV_LABEL}}</span>
+      <h2>{{SERVICES_HEADING}}</h2>
+      {{SERVICES_HTML}}
+    </div>
+  </section>
+
+  <!-- ── Hours ───────────────────────────────────────────── -->
+  <section class="hours section" id="hours">
+    <div class="container">
+      <span class="section-label">Hours</span>
+      <h2>When We're Open</h2>
+      <div class="hours__card">
+        <div class="hours__badge" id="open-now-badge" hidden></div>
+        <table class="hours__table" aria-label="Business hours">
+          <tbody>
+            {{HOURS_TABLE_HTML}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery ─────────────────────────────────────────── -->
+  {{GALLERY_SECTION_HTML}}
+
+  <!-- ── Contact ─────────────────────────────────────────── -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2>Find Us</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__address">{{ADDRESS}}</p>
+          <a href="tel:{{PHONE}}" class="contact__phone">{{PHONE_DISPLAY}}</a>
+          {{EMAIL_HTML}}
+          {{CONTACT_FORM_HTML}}
+        </div>
+        <div class="contact__map">
+          {{GOOGLE_MAPS_EMBED_HTML}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; {{YEAR}} {{BUSINESS_NAME}} &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const HOURS_DATA = {{HOURS_JSON}};
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

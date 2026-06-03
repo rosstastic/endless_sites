@@ -1,0 +1,102 @@
+{
+  "slug": "merriweather-cafe-deli-columbia",
+  "status": "prototype",
+  "business": {
+    "name": "Merriweather Cafe & Deli",
+    "tagline": "Your neighborhood deli \u2014 great coffee, handmade sandwiches, and a warm welcome every morning",
+    "description": "Merriweather Cafe & Deli is a beloved Columbia gem nestled in the heart of the Merriweather District. Run by Mrs. Connie, this neighborhood deli serves up fresh-made sandwiches, quality coffee, and the kind of genuine hospitality you simply can't find at a chain. Regulars make the trip every morning just for the breakfast sandwiches and the welcoming atmosphere.",
+    "category": "Cafe",
+    "address": "10980 Grantchester Way, Ste 110, Columbia, MD 21044",
+    "phone": "(410) 992-0100",
+    "email": null,
+    "year_founded": null,
+    "hours": {
+      "monday": "7:00 AM \u2013 4:00 PM",
+      "tuesday": "7:00 AM \u2013 4:00 PM",
+      "wednesday": "7:00 AM \u2013 4:00 PM",
+      "thursday": "7:00 AM \u2013 4:00 PM",
+      "friday": "7:00 AM \u2013 4:00 PM",
+      "saturday": "Closed",
+      "sunday": "Closed"
+    },
+    "services_or_menu": [
+      {
+        "section": "Breakfast",
+        "items": [
+          {
+            "name": "Breakfast Sandwich",
+            "price": "",
+            "description": "Fresh egg, your choice of meat and cheese on a toasted roll"
+          },
+          {
+            "name": "Morning Coffee",
+            "price": "",
+            "description": "Freshly brewed drip coffee or espresso drinks"
+          }
+        ]
+      },
+      {
+        "section": "Sandwiches & Wraps",
+        "items": [
+          {
+            "name": "The Powerhouse",
+            "price": "",
+            "description": "Our signature stacked sandwich \u2014 ask Mrs. Connie what's in it today"
+          },
+          {
+            "name": "Turkey on Pita",
+            "price": "",
+            "description": "Sliced turkey with fresh vegetables on warm pita"
+          },
+          {
+            "name": "Veggie Sandwich",
+            "price": "",
+            "description": "Seasonal vegetables, hummus, and greens on your choice of bread"
+          }
+        ]
+      },
+      {
+        "section": "Drinks",
+        "items": [
+          {
+            "name": "Fresh Coffee",
+            "price": "",
+            "description": "Drip, espresso, latte \u2014 brewed fresh all morning"
+          },
+          {
+            "name": "Juice & Beverages",
+            "price": "",
+            "description": "Bottled juices, sparkling water, and daily specials"
+          }
+        ]
+      }
+    ],
+    "google_maps_embed_url": "https://maps.google.com/maps?q=10980+Grantchester+Way+Columbia+MD+21044&output=embed",
+    "yelp_url": "https://www.yelp.com/biz/merriweather-cafe-and-deli-columbia",
+    "photos_found": []
+  },
+  "owner": {
+    "name": "Mrs. Connie",
+    "contact_phone": "(410) 992-0100",
+    "contact_email": "",
+    "contact_source": "Multiple Yelp reviews reference Mrs. Connie as the owner/operator"
+  },
+  "research": {
+    "sources_checked": [
+      "Yelp",
+      "Joe Coffee",
+      "Zmenu",
+      "Restaurantji",
+      "Yellow Pages"
+    ],
+    "has_existing_website": false,
+    "website_check_notes": "No dedicated business website found. Listed on third-party aggregators (Joe Coffee, Zmenu, Restaurantji) but no .com or owned domain. Yelp listing shows no website URL.",
+    "researched_at": "2026-06-03T22:00:00Z"
+  },
+  "review_log": [],
+  "deploy": {
+    "cloudflare_project_name": "endless-merriweather-cafe-deli-columbia",
+    "last_deployed_url": null,
+    "deployed_at": null
+  }
+}

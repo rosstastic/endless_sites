@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="20" fill="#E5E7EB"/>
+  <rect x="60" y="55" width="80" height="60" rx="6" fill="#9CA3AF"/>
+  <rect x="75" y="130" width="50" height="8" rx="4" fill="#D1D5DB"/>
+  <circle cx="100" cy="85" r="18" fill="#F3F4F6"/>
+  <text x="100" y="170" font-family="-apple-system,sans-serif" font-size="11" fill="#9CA3AF" text-anchor="middle">LOGO</text>
+</svg>
