@@ -73,6 +73,14 @@ ul   { list-style: none; }
 .nav__hamburger.open span:nth-child(2) { opacity: 0; }
 .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+.nav__right { display: flex; align-items: center; gap: 1.75rem; }
+.nav__tel {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .82rem; color: var(--text-muted);
+  transition: color var(--ease); white-space: nowrap;
+}
+.nav__tel:hover { color: var(--accent-dark); }
+
 /* ── Buttons ───────────────────────────────────────────── */
 .btn {
   display: inline-block; padding: .75rem 1.75rem; border-radius: 50px;
@@ -115,6 +123,15 @@ ul   { list-style: none; }
   color: rgba(255,255,255,.85); margin-bottom: 2.5rem; line-height: 1.55;
 }
 .hero__cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero__tel {
+  margin-top: 1.25rem; font-size: .85rem; color: rgba(255,255,255,.6);
+  text-align: center;
+}
+.hero__tel a {
+  color: inherit; border-bottom: 1px solid rgba(255,255,255,.25);
+  transition: color var(--ease), border-color var(--ease);
+}
+.hero__tel a:hover { color: rgba(255,255,255,.95); border-color: rgba(255,255,255,.55); }
 
 /* ── About ─────────────────────────────────────────────── */
 .about { background: var(--bg); padding-top: 7rem; }
@@ -257,6 +274,7 @@ ul   { list-style: none; }
 @media (max-width: 768px) {
   .section { padding: 3.5rem 0; }
   .nav__hamburger { display: flex; }
+  .nav__tel span { display: none; }
   .nav__links {
     display: none; position: absolute; top: 64px; left: 0; right: 0;
     background: rgba(250,245,236,.98); border-bottom: 1px solid rgba(212,168,83,.2);
