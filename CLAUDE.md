@@ -72,14 +72,21 @@ GitHub Pages portfolio URL: `https://rosstastic.github.io/endless_sites/`
 Individual site paths: `sites/<slug>/index.html`
 
 ## Photo Sourcing (Unsplash)
-Unsplash blocks all server-side fetches (403), so photos cannot be verified programmatically. They work fine in browsers.
+Unsplash blocks all server-side fetches (403), so photos cannot be verified programmatically.
 
-To find photo IDs without API access:
-1. Google: `site:unsplash.com/photos "keyword"` (e.g. `site:unsplash.com/photos "korean fried chicken"`)
-2. The last segment of each photo page URL is the CDN slug (e.g. `ebNZJGWd4zY` from `unsplash.com/photos/...ebNZJGWd4zY`)
-3. Use as: `https://images.unsplash.com/{slug}?w=1400&q=80&fit=crop`
+**CRITICAL:** Only old-format IDs (`photo-XXXXXXXXXX-XXXXXXXXXXXX`) work as CDN image URLs. New-format slugs (e.g. `ebNZJGWd4zY`) are Unsplash page slugs only — they do NOT work as `images.unsplash.com/{slug}` CDN paths and will show broken images.
 
-Both old-format (`photo-1234...`) and new-format (`ebNZJGWd4zY`) slugs work in this URL pattern.
+To find confirmed old-format IDs:
+1. Google: `unsplash "photo-XXXXXXXXXX"` — if the first result is a direct `images.unsplash.com/photo-...` URL, the ID is valid
+2. Google: `site:unsplash.com/photos "keyword"` returns new-format slugs — **do not use these as CDN URLs**
+3. Confirmed working IDs already in use (safe to reuse in individual site galleries):
+   - Food/BBQ: `photo-1555992336-03a23c7b20ee`
+   - Food overhead: `photo-1504674900247-0877df9cc836`
+   - Tacos: `photo-1565299624946-b28f40a0ae38`
+   - Cafe/coffee: `photo-1509042239860-f550ce710b93`
+   - Nails: `photo-1604654894610-df63bc536371`
+
+Use as: `https://images.unsplash.com/photo-XXXXXXXXXX-XXXXXXXXXXXX?w=1400&q=80&fit=crop`
 
 ## Template Routing
 `fill-template.py` picks the template based on the first keyword match in `CATEGORY_TEMPLATES`. The category string in `meta.json` must be set deliberately:
