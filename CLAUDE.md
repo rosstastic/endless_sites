@@ -30,7 +30,18 @@ Target: **5 approved sites**. When reached, print the contact sheet (from `check
 4. Read the scaffolded `meta.json` before writing it (Write tool requires a prior Read)
 5. Fill `meta.json` with complete research data
 6. Run `python3 scripts/fill-template.py <slug>` to generate the site
-7. Add the new business card to `index.html` (the GitHub Pages portfolio)
+7. Add the new business card to `index.html` (the GitHub Pages portfolio) — use the hero image URL from meta.json at `w=600`. Card format:
+   ```html
+   <a href="sites/<slug>/index.html" class="card">
+     <div class="card__preview" style="background-image: url('<hero_image_url w=600>');"></div>
+     <div class="card__body">
+       <div class="card__category" style="color: <accent-hex>;">Category Label</div>
+       <div class="card__name">Business Name</div>
+       <div class="card__address">Street · City, State Zip</div>
+       <span class="card__status">Prototype</span>
+     </div>
+   </a>
+   ```
 8. Commit and push to dev branch, then push dev→staging (see Git section below)
 9. Present to user: site summary, file path, GitHub Pages URL
 10. Record user decision in `meta.json` `review_log[]`
