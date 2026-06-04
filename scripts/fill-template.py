@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
 """fill-template.py <slug>
 Reads sites/<slug>/meta.json and generates a finished index.html
-by substituting all {{TOKEN}} placeholders in the template copy.
+by substituting all {{TOKEN}} placeholders in the category-specific template.
 Updates status to 'prototype' in meta.json and businesses.json.
 """
 
 import json
 import sys
 import os
+import re as _re
 import datetime
 import html as html_lib
+import shutil
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CATEGORY_COLORS = {
-    "restaurant":   ("#2C3E50", "#E67E22"),
+    "restaurant":   ("#111111", "#e67e22"),
     "bar":          ("#1A1A2E", "#C0392B"),
-    "cafe":         ("#3E2723", "#D4A853"),
+    "cafe":         ("#3e2723", "#d4a853"),
     "bakery":       ("#4A235A", "#E8A87C"),
-    "salon":        ("#6C3483", "#F1948A"),
-    "nail":         ("#7D3C98", "#F8C8D4"),
+    "deli":         ("#3e2723", "#d4a853"),
+    "coffee":       ("#3e2723", "#d4a853"),
+    "salon":        ("#4a235a", "#F8C8D4"),
+    "nail":         ("#4a235a", "#F8C8D4"),
     "spa":          ("#1B4F72", "#A9CCE3"),
     "barbershop":   ("#1A252F", "#2ECC71"),
     "auto":         ("#1A252F", "#2980B9"),
@@ -34,6 +38,19 @@ CATEGORY_COLORS = {
 }
 DEFAULT_COLORS = ("#2C3E50", "#3498DB")
 
+CATEGORY_TEMPLATES = {
+    "restaurant": "restaurant",
+    "bar":        "restaurant",
+    "food":       "restaurant",
+    "cafe":       "cafe",
+    "bakery":     "cafe",
+    "deli":       "cafe",
+    "coffee":     "cafe",
+    "nail":       "salon",
+    "salon":      "salon",
+    "spa":        "salon",
+}
+
 SERVICES_ICONS = {
     "restaurant": "🍽️", "bar": "🍺", "cafe": "☕", "bakery": "🥐",
     "salon": "✂️", "nail": "💅", "spa": "🧖", "barbershop": "💈",
@@ -46,6 +63,10 @@ DAY_ORDER = ["monday","tuesday","wednesday","thursday","friday","saturday","sund
 DAY_DISPLAY = {
     "monday":"Monday","tuesday":"Tuesday","wednesday":"Wednesday",
     "thursday":"Thursday","friday":"Friday","saturday":"Saturday","sunday":"Sunday"
+}
+DAY_SHORT = {
+    "monday":"Mon","tuesday":"Tue","wednesday":"Wed",
+    "thursday":"Thu","friday":"Fri","saturday":"Sat","sunday":"Sun"
 }
 
 
@@ -61,6 +82,14 @@ def get_colors(category):
     return DEFAULT_COLORS
 
 
+def get_template_dir(category):
+    cat = (category or "").lower()
+    for key, tmpl in CATEGORY_TEMPLATES.items():
+        if key in cat:
+            return os.path.join(REPO_ROOT, "templates", tmpl)
+    return os.path.join(REPO_ROOT, "templates", "business")
+
+
 def render_hours_table(hours):
     rows = []
     for day in DAY_ORDER:
@@ -71,13 +100,66 @@ def render_hours_table(hours):
     return "\n            ".join(rows)
 
 
+def render_hours_row(hours):
+    """Renders hours as horizontal pill badges (restaurant template)."""
+    pills = []
+    for day in DAY_ORDER:
+        val = hours.get(day, "Closed") or "Closed"
+        is_closed = val.strip().lower() == "closed"
+        cls = "hours__pill closed" if is_closed else "hours__pill open"
+        pills.append(
+            f'<div class="{cls}">'
+            f'<span class="hours__pill__day">{DAY_SHORT[day]}</span>'
+            f'<span class="hours__pill__time">{esc(val)}</span>'
+            f'</div>'
+        )
+    return "\n".join(pills)
+
+
+def render_favorites_html(services, photos):
+    """Cafe-specific: renders 'Today's Favorites' image cards."""
+    if not services:
+        return ""
+    cards = []
+    for i, section in enumerate(services[:3]):
+        items = section.get("items", [])
+        section_name = section.get("section", "")
+        if items:
+            item = items[0]
+            if isinstance(item, dict):
+                name = item.get("name", section_name)
+                desc = item.get("description", "")
+            else:
+                name = str(item)
+                desc = ""
+        else:
+            name = section_name
+            desc = ""
+
+        bg = photos[i] if i < len(photos) else (photos[0] if photos else "")
+        bg_style = f'style="background-image:url(\'{esc(bg)}\')"' if bg else ""
+        desc_html = f'<p class="fav-card__desc">{esc(desc)}</p>' if desc else ""
+
+        cards.append(
+            f'<div class="fav-card" {bg_style}>'
+            f'<div class="fav-card__overlay"></div>'
+            f'<div class="fav-card__body">'
+            f'<p class="fav-card__cat">{esc(section_name)}</p>'
+            f'<h3 class="fav-card__name">{esc(name)}</h3>'
+            f'{desc_html}'
+            f'</div></div>'
+        )
+    if not cards:
+        return ""
+    return '<div class="favorites__grid">' + "\n".join(cards) + "</div>"
+
+
 def render_services_html(services_or_menu, category):
-    """Renders either menu sections (restaurant) or service cards (other)."""
     if not services_or_menu:
-        return '<p style="color:var(--color-text-light)">Details coming soon.</p>'
+        return '<p style="color:var(--color-text-muted)">Details coming soon.</p>'
 
     cat = (category or "").lower()
-    is_restaurant = any(k in cat for k in ("restaurant","bar","cafe","bakery","food"))
+    is_restaurant = any(k in cat for k in ("restaurant","bar","cafe","bakery","food","deli"))
 
     if is_restaurant:
         return render_menu(services_or_menu)
@@ -96,15 +178,16 @@ def render_menu(sections):
                 price = esc(item.get("price", ""))
                 desc  = esc(item.get("description", ""))
                 price_html = f'<span class="menu-item__price">{price}</span>' if price else ""
-                desc_html  = f'<span class="menu-item__desc">{desc}</span>' if desc else ""
+                desc_html  = f'<p class="menu-item__desc">{desc}</p>' if desc else ""
                 items_html.append(
-                    f'<div class="menu-item"><span class="menu-item__name">{name}</span>{price_html}</div>'
-                    + (f'<div class="menu-item" style="padding-top:0;border:none">{desc_html}</div>' if desc else "")
+                    f'<div class="menu-item">'
+                    f'<span class="menu-item__name">{name}</span>'
+                    f'{price_html}'
+                    f'</div>'
+                    + (f'<div class="menu-item__desc-row">{desc_html}</div>' if desc else "")
                 )
             else:
-                # Simple string like "Fried Chicken ($14)"
                 text = str(item)
-                # Try to split off trailing price in parens
                 if "(" in text and text.endswith(")"):
                     name_part, price_part = text.rsplit("(", 1)
                     price_part = price_part.rstrip(")")
@@ -116,7 +199,9 @@ def render_menu(sections):
                     )
                 else:
                     items_html.append(
-                        f'<div class="menu-item"><span class="menu-item__name">{esc(text)}</span></div>'
+                        f'<div class="menu-item">'
+                        f'<span class="menu-item__name">{esc(text)}</span>'
+                        f'</div>'
                     )
         parts.append(
             f'<div class="menu-section">'
@@ -156,7 +241,6 @@ def render_service_cards(sections, category):
                 f'</div>'
             )
 
-        # If no items, make the section itself a card
         if not items and title:
             cards.append(
                 f'<div class="service-card">'
@@ -166,7 +250,7 @@ def render_service_cards(sections, category):
             )
 
     if not cards:
-        return '<p style="color:var(--color-text-light)">Services available — call for details.</p>'
+        return '<p style="color:var(--color-text-muted)">Services available — call for details.</p>'
 
     return '<div class="services__grid">' + "\n".join(cards) + "</div>"
 
@@ -194,7 +278,7 @@ def render_gallery(photos):
 
 def render_google_maps(embed_url):
     if not embed_url:
-        return '<p style="color:var(--color-text-light)">Find us on Google Maps.</p>'
+        return '<p style="color:var(--color-text-muted)">Find us on Google Maps.</p>'
     return f'<iframe src="{esc(embed_url)}" allowfullscreen loading="lazy" title="Map"></iframe>'
 
 
@@ -231,7 +315,6 @@ def render_founded_badge(year_founded):
 def fill(slug):
     site_dir = os.path.join(REPO_ROOT, "sites", slug)
     meta_path = os.path.join(site_dir, "meta.json")
-    html_path = os.path.join(site_dir, "index.html")
 
     if not os.path.isdir(site_dir):
         print(f"Error: sites/{slug}/ does not exist. Run new-site.sh first.", file=sys.stderr)
@@ -243,62 +326,83 @@ def fill(slug):
     biz = meta["business"]
     cat = biz.get("category", "")
 
+    # Routing: pick the right template dir
+    template_dir = get_template_dir(cat)
+    template_html_path = os.path.join(template_dir, "index.html")
+    if not os.path.exists(template_html_path):
+        template_dir = os.path.join(REPO_ROOT, "templates", "business")
+        template_html_path = os.path.join(template_dir, "index.html")
+
+    html_path = os.path.join(site_dir, "index.html")
+
     # Colors
     color_primary, color_accent = get_colors(cat)
 
     # Services nav label
     cat_lower = cat.lower()
-    if any(k in cat_lower for k in ("restaurant","bar","cafe","bakery","food")):
+    if any(k in cat_lower for k in ("restaurant","bar","cafe","bakery","food","deli")):
         services_nav_label = "Menu"
         services_heading   = "Our Menu"
     else:
         services_nav_label = "Services"
         services_heading   = "What We Offer"
 
-    # Hero image
-    hero_url = "assets/hero.jpg"
-    if not os.path.exists(os.path.join(site_dir, "assets", "hero.jpg")):
-        hero_url = "assets/placeholder-hero.svg"
+    # Hero image: prefer meta hero_image_url, then local file, then placeholder
+    photos = biz.get("photos_found", [])
+    hero_url = biz.get("hero_image_url", "")
+    if not hero_url:
+        if os.path.exists(os.path.join(site_dir, "assets", "hero.jpg")):
+            hero_url = "assets/hero.jpg"
+        else:
+            hero_url = "assets/placeholder-hero.svg"
 
-    # About image (same as hero by default)
-    about_url = hero_url
+    # About image: use second photo if available, else hero
+    about_url = photos[1] if len(photos) > 1 else hero_url
 
     # Hours JSON for JS
     hours_json = json.dumps(biz.get("hours", {}))
 
-    # Photos for gallery (exclude hero if same)
-    photos = biz.get("photos_found", [])
-
-    import re as _re
     phone_raw = biz.get("phone", "")
-    phone_href = _re.sub(r"[^\d+]", "", phone_raw)  # digits only for tel: href
+    phone_href = _re.sub(r"[^\d+]", "", phone_raw)
+
+    # Optional fields with defaults
+    pull_quote = biz.get("pull_quote", "Come taste the difference.")
+    testimonial_quote = biz.get("testimonial_quote", "A neighborhood gem that feels like home.")
+    testimonial_author = biz.get("testimonial_author", "— Happy Customer")
+    owner_name = meta.get("owner", {}).get("name", "")
 
     substitutions = {
-        "{{BUSINESS_NAME}}":      esc(biz.get("name", "")),
-        "{{TAGLINE}}":            esc(biz.get("tagline", "")),
-        "{{DESCRIPTION}}":        esc(biz.get("description", "")),
-        "{{CATEGORY}}":           esc(cat),
-        "{{PHONE}}":              phone_href,
-        "{{PHONE_DISPLAY}}":      esc(phone_raw),
-        "{{ADDRESS}}":            esc(biz.get("address", "")).replace(",", ",<br>"),
-        "{{HERO_IMAGE_URL}}":     hero_url,
-        "{{ABOUT_IMAGE_URL}}":    about_url,
-        "{{COLOR_PRIMARY}}":      color_primary,
-        "{{COLOR_ACCENT}}":       color_accent,
-        "{{SERVICES_NAV_LABEL}}": services_nav_label,
-        "{{SERVICES_HEADING}}":   services_heading,
-        "{{HOURS_TABLE_HTML}}":   render_hours_table(biz.get("hours", {})),
-        "{{HOURS_JSON}}":         hours_json,
-        "{{SERVICES_HTML}}":      render_services_html(biz.get("services_or_menu", []), cat),
-        "{{GALLERY_SECTION_HTML}}": render_gallery(photos),
+        "{{BUSINESS_NAME}}":         esc(biz.get("name", "")),
+        "{{TAGLINE}}":               esc(biz.get("tagline", "")),
+        "{{DESCRIPTION}}":           esc(biz.get("description", "")),
+        "{{CATEGORY}}":              esc(cat),
+        "{{PHONE}}":                 phone_href,
+        "{{PHONE_DISPLAY}}":         esc(phone_raw),
+        "{{ADDRESS}}":               esc(biz.get("address", "")).replace(",", ",<br>"),
+        "{{HERO_IMAGE_URL}}":        esc(hero_url),
+        "{{ABOUT_IMAGE_URL}}":       esc(about_url),
+        "{{COLOR_PRIMARY}}":         color_primary,
+        "{{COLOR_ACCENT}}":          color_accent,
+        "{{SERVICES_NAV_LABEL}}":    services_nav_label,
+        "{{SERVICES_HEADING}}":      services_heading,
+        "{{HOURS_TABLE_HTML}}":      render_hours_table(biz.get("hours", {})),
+        "{{HOURS_ROW_HTML}}":        render_hours_row(biz.get("hours", {})),
+        "{{HOURS_JSON}}":            hours_json,
+        "{{SERVICES_HTML}}":         render_services_html(biz.get("services_or_menu", []), cat),
+        "{{FAVORITES_HTML}}":        render_favorites_html(biz.get("services_or_menu", []), photos),
+        "{{GALLERY_SECTION_HTML}}":  render_gallery(photos),
         "{{GOOGLE_MAPS_EMBED_HTML}}": render_google_maps(biz.get("google_maps_embed_url", "")),
-        "{{EMAIL_HTML}}":         render_email_html(biz.get("email")),
-        "{{CONTACT_FORM_HTML}}":  render_contact_form(""),
-        "{{FOUNDED_BADGE_HTML}}": render_founded_badge(biz.get("year_founded")),
-        "{{YEAR}}":               str(datetime.date.today().year),
+        "{{EMAIL_HTML}}":            render_email_html(biz.get("email")),
+        "{{CONTACT_FORM_HTML}}":     render_contact_form(""),
+        "{{FOUNDED_BADGE_HTML}}":    render_founded_badge(biz.get("year_founded")),
+        "{{PULL_QUOTE}}":            esc(pull_quote),
+        "{{TESTIMONIAL_QUOTE}}":     esc(testimonial_quote),
+        "{{TESTIMONIAL_AUTHOR}}":    esc(testimonial_author),
+        "{{OWNER_NAME}}":            esc(owner_name),
+        "{{YEAR}}":                  str(datetime.date.today().year),
     }
 
-    with open(html_path) as f:
+    with open(template_html_path) as f:
         content = f.read()
 
     for token, value in substitutions.items():
@@ -306,6 +410,13 @@ def fill(slug):
 
     with open(html_path, "w") as f:
         f.write(content)
+
+    # Copy CSS (and script.js if present) from template dir to site dir
+    for fname in ("style.css", "script.js"):
+        src = os.path.join(template_dir, fname)
+        dst = os.path.join(site_dir, fname)
+        if os.path.exists(src):
+            shutil.copy2(src, dst)
 
     # Update status in meta.json
     now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -333,8 +444,9 @@ def fill(slug):
         json.dump(reg, f, indent=2)
         f.write("\n")
 
-    print(f"✓ Generated sites/{slug}/index.html")
-    print(f"  Status set to: prototype")
+    tmpl_name = os.path.basename(template_dir)
+    print(f"✓ Generated sites/{slug}/index.html  [template: {tmpl_name}]")
+    print(f"  Status: prototype")
     print(f"\nNext: deploy and review")
     print(f"  wrangler pages deploy sites/{slug}/ --project-name=endless-{slug}")
 

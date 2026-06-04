@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-03T23:05:41Z",
+  "updated_at": "2026-06-04T01:51:49Z",
   "milestone": {
     "target": 5,
     "approved": 0,
@@ -15,7 +15,7 @@
       "status": "prototype",
       "site_path": "sites/namit-filipino-barbecue-columbia/",
       "added_at": "2026-06-03T23:03:18Z",
-      "updated_at": "2026-06-03T23:05:41Z"
+      "updated_at": "2026-06-04T01:51:49Z"
     },
     {
       "slug": "merriweather-cafe-deli-columbia",
@@ -23,7 +23,7 @@
       "status": "prototype",
       "site_path": "sites/merriweather-cafe-deli-columbia/",
       "added_at": "2026-06-03T23:03:21Z",
-      "updated_at": "2026-06-03T23:05:41Z"
+      "updated_at": "2026-06-04T01:51:49Z"
     },
     {
       "slug": "columbia-nails-hickory-ridge",
@@ -31,7 +31,7 @@
       "status": "prototype",
       "site_path": "sites/columbia-nails-hickory-ridge/",
       "added_at": "2026-06-03T23:03:21Z",
-      "updated_at": "2026-06-03T23:05:41Z"
+      "updated_at": "2026-06-04T01:51:49Z"
     }
   ]
 }
