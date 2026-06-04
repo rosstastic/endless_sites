@@ -42,7 +42,7 @@ Target: **5 approved sites**. When reached, print the contact sheet (from `check
      </div>
    </a>
    ```
-8. Commit and push to dev branch, then push dev→staging (see Git section below)
+8. Commit and push to dev branch, then push dev→main and dev→staging (see Git section below)
 9. Present to user: site summary, file path, GitHub Pages URL
 10. Record user decision in `meta.json` `review_log[]`
 11. If iterate: edit directly, re-present. If approve: update status, run check-milestone. If abandon: update status, start research.
@@ -52,16 +52,18 @@ Target: **5 approved sites**. When reached, print the contact sheet (from `check
 - `python3 scripts/fill-template.py <slug>` — generate site from meta.json data
 - `python3 scripts/check-milestone.py` — show progress, surface contacts at milestone
 
-## Git — Dev → Staging Protocol
-The GitHub Pages deploy triggers on pushes to `staging`. Always push to dev first, then to staging. **Never force push to staging.**
+## Git — Push Protocol
+GitHub Pages deploys on push to `main` (the `github-pages` environment only allows the default branch). Always push to dev first, then to both `main` and `staging`. **Never force push.**
 
 ```bash
 git push -u origin claude/local-business-static-sites-P3Fqm
+git push origin claude/local-business-static-sites-P3Fqm:main
 git push origin claude/local-business-static-sites-P3Fqm:staging
 ```
 
-Before pushing dev→staging, check for divergence:
+Before pushing dev→main or dev→staging, check for divergence:
 ```bash
+git log HEAD..origin/main --oneline
 git log HEAD..origin/staging --oneline
 ```
 If staging has commits not on dev (e.g. workflow tweaks made directly on staging), cherry-pick them to dev first, then push normally. Any file that belongs in the repo long-term (GitHub Actions workflow, `index.html`) must live on the dev branch — never staging-only.
