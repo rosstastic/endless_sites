@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Salvadoran &amp; Mexican home cooking in Columbia, MD.">
+  <meta property="og:title" content="El Gran Sabor">
+  <meta property="og:description" content="Authentic Salvadoran &amp; Mexican home cooking in Columbia, MD.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/cYHbHxVCwDs?w=1400&amp;q=80&amp;fit=crop">
+  <title>El Gran Sabor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">El Gran Sabor</a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__right">
+        <a href="tel:4432589975" class="nav__tel" aria-label="Call us">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.85 9.69 19.73 19.73 0 01.77 1.13 2 2 0 012.76 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.82a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(443) 258-9975</span>
+        </a>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Menu</a></li>
+          <li><a href="#hours">Hours</a></li>
+          <li><a href="#contact" class="btn btn--accent">Find Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero" style="background-image:url('https://images.unsplash.com/cYHbHxVCwDs?w=1400&amp;q=80&amp;fit=crop');" aria-label="El Gran Sabor">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Salvadoran Cafe &middot; Columbia, MD</p>
+      <h1 class="hero__title">El Gran Sabor</h1>
+      <p class="hero__tagline">Authentic Salvadoran &amp; Mexican home cooking in Columbia, MD.</p>
+      <div class="hero__cta">
+        <a href="#services" class="btn btn--accent">See the Menu</a>
+        <a href="#contact" class="btn btn--outline">Find Us</a>
+      </div>
+      <p class="hero__tel"><a href="tel:4432589975">(443) 258-9975</a></p>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <span class="section-label">About</span>
+        <h2>El Gran Sabor</h2>
+        <p>El Gran Sabor is a family-run Salvadoran and Mexican kitchen tucked into Oakland Mills. The hand-pressed pupusas — filled with chicharrón, cheese, or loroco — are made fresh to order. Fajitas arrive on a sizzling cast iron plate, the tacos come loaded and generously portioned, and the homemade chips and salsa are worth the trip alone. Everything tastes like it was cooked by someone who loves food. Because it was.</p>
+        
+      </div>
+      <div class="about__photo">
+        <img src="https://images.unsplash.com/3R9mIWSbYKo?w=1400&amp;q=80&amp;fit=crop" alt="Inside El Gran Sabor" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="favorites section" id="favorites">
+    <div class="container">
+      <span class="section-label">Crowd Favorites</span>
+      <h2>What People Come For</h2>
+      <div class="favorites__grid"><div class="fav-card" style="background-image:url('https://images.unsplash.com/cYHbHxVCwDs?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Pupusas</p><h3 class="fav-card__name">Chicharrón</h3><p class="fav-card__desc">Seasoned ground pork, crispy and savory. Made fresh and griddled to order.</p></div></div>
+<div class="fav-card" style="background-image:url('https://images.unsplash.com/3R9mIWSbYKo?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Tacos</p><h3 class="fav-card__name">Carne Asada</h3><p class="fav-card__desc">Grilled skirt steak on handmade corn tortillas, topped with onion, cilantro, and lime.</p></div></div>
+<div class="fav-card" style="background-image:url('https://images.unsplash.com/Om92MLYXV2g?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Fajitas</p><h3 class="fav-card__name">Fajitas El Gran Sabor</h3><p class="fav-card__desc">Carne asada on a sizzling cast iron skillet with peppers, onion, and all the fixings.</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="menu section section--light" id="services">
+    <div class="container">
+      <span class="section-label">Menu</span>
+      <h2>Our Menu</h2>
+      <div class="menu-section"><div class="menu-section__title">Pupusas</div><div class="menu-item"><span class="menu-item__name">Chicharrón</span><span class="menu-item__price">$3.50</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Seasoned ground pork, crispy and savory. Made fresh and griddled to order.</p></div>
+<div class="menu-item"><span class="menu-item__name">Queso</span><span class="menu-item__price">$3.25</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Melted cheese inside a golden corn masa shell. Simple and satisfying.</p></div>
+<div class="menu-item"><span class="menu-item__name">Loroco con Queso</span><span class="menu-item__price">$3.50</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Edible loroco flower buds with melted cheese — a true Salvadoran classic.</p></div>
+<div class="menu-item"><span class="menu-item__name">Frijoles con Queso</span><span class="menu-item__price">$3.25</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Creamy black beans and cheese pressed inside fresh-made masa.</p></div>
+<div class="menu-item"><span class="menu-item__name">Revueltas</span><span class="menu-item__price">$3.75</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Chicharrón, beans, and cheese together — the full experience in one bite.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Tacos</div><div class="menu-item"><span class="menu-item__name">Carne Asada</span><span class="menu-item__price">$3.75</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Grilled skirt steak on handmade corn tortillas, topped with onion, cilantro, and lime.</p></div>
+<div class="menu-item"><span class="menu-item__name">Carnitas</span><span class="menu-item__price">$3.75</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Slow-braised pork, crispy on the edges, rich and tender inside.</p></div>
+<div class="menu-item"><span class="menu-item__name">Al Pastor</span><span class="menu-item__price">$3.75</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Marinated pork with a hint of pineapple — tangy, sweet, and full of flavor.</p></div>
+<div class="menu-item"><span class="menu-item__name">Lengua</span><span class="menu-item__price">$4.00</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Tender beef tongue, slow-cooked until melt-in-your-mouth soft.</p></div>
+<div class="menu-item"><span class="menu-item__name">Pollo</span><span class="menu-item__price">$3.50</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Seasoned grilled chicken on fresh corn tortillas.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Fajitas</div><div class="menu-item"><span class="menu-item__name">Fajitas El Gran Sabor</span><span class="menu-item__price">$16.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Carne asada on a sizzling cast iron skillet with peppers, onion, and all the fixings.</p></div>
+<div class="menu-item"><span class="menu-item__name">Pollo Fajitas</span><span class="menu-item__price">$15.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Grilled chicken breast with sautéed peppers and onion.</p></div>
+<div class="menu-item"><span class="menu-item__name">Camarón Fajitas</span><span class="menu-item__price">$17.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Sautéed shrimp in garlic butter with peppers and onion.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Burritos &amp; Tortas</div><div class="menu-item"><span class="menu-item__name">Carne Asada Burrito</span><span class="menu-item__price">$11.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Large flour tortilla stuffed with grilled steak, rice, beans, and pico de gallo.</p></div>
+<div class="menu-item"><span class="menu-item__name">Veggie Burrito</span><span class="menu-item__price">$10.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Grilled seasonal vegetables and black beans in a warm flour tortilla.</p></div>
+<div class="menu-item"><span class="menu-item__name">Torta El Gran Sabor</span><span class="menu-item__price">$12.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Toasted bolillo roll with carne asada, avocado, jalapeños, and house salsa.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Sopas</div><div class="menu-item"><span class="menu-item__name">Sopa de Pollo</span><span class="menu-item__price">$10.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Comforting chicken soup with vegetables, noodles, and fresh herbs.</p></div>
+<div class="menu-item"><span class="menu-item__name">Sopa de Mariscos</span><span class="menu-item__price">$14.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Hearty seafood soup — a weekend favorite when it&#x27;s available.</p></div></div>
+    </div>
+  </section>
+
+  <div class="testimonial">
+    <div class="container">
+      <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote class="testimonial__quote">&#8220;The pupusas are some of the best I&#x27;ve had — homemade, crispy on the outside and perfectly filled. The carne asada tacos are packed with flavor. This place is a hidden gem.&#8221;</blockquote>
+      <cite class="testimonial__author">Google reviewer, Oakland Mills</cite>
+    </div>
+  </div>
+
+  <section class="hours section" id="hours">
+    <div class="container">
+      <span class="section-label">Hours</span>
+      <h2>When We&#8217;re Open</h2>
+      <div class="hours__card">
+        <div class="hours__badge" id="open-now-badge" hidden></div>
+        <table class="hours__table" aria-label="Business hours">
+          <tbody>
+            <tr><td>Monday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Tuesday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Thursday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Friday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Saturday</td><td>11:00 AM – 9:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section section--light" id="contact">
+    <div class="container">
+      <span class="section-label">Come Say Hi</span>
+      <h2>Find Us</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__address">5865 Robert Oliver Place,<br> Unit D,<br> Columbia,<br> MD 21045</p>
+          <a href="tel:4432589975" class="contact__phone">(443) 258-9975</a>
+          
+          
+        </div>
+        <div class="contact__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.5!2d-76.8335!3d39.2015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7df7b5f93a9d%3A0xabcdef1234567890!2s5865+Robert+Oliver+Pl%2C+Columbia%2C+MD+21045!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 El Gran Sabor &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
+    </div>
+  </footer>
+
+  <script>const HOURS_DATA = {"monday": "11:00 AM \u2013 9:00 PM", "tuesday": "11:00 AM \u2013 9:00 PM", "wednesday": "11:00 AM \u2013 9:00 PM", "thursday": "11:00 AM \u2013 9:00 PM", "friday": "11:00 AM \u2013 9:00 PM", "saturday": "11:00 AM \u2013 9:00 PM", "sunday": "Closed"};</script>
+  <script src="script.js"></script>
+</body>
+</html>

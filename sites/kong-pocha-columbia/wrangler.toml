@@ -1,0 +1,6 @@
+name = "endless-kong-pocha-columbia"
+compatibility_date = "2025-01-01"
+
+# Deploy command (run from repo root):
+#   wrangler pages deploy sites/kong-pocha-columbia/ --project-name=endless-kong-pocha-columbia
+# Live URL: https://endless-kong-pocha-columbia.pages.dev

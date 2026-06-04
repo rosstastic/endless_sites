@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updated_at": "2026-06-04T01:51:49Z",
+  "updated_at": "2026-06-04T11:15:43Z",
   "milestone": {
     "target": 5,
     "approved": 0,
-    "in_progress": 3,
+    "in_progress": 5,
     "abandoned": 0,
-    "last_updated": "2026-06-03T23:05:09Z"
+    "last_updated": "2026-06-04T11:19:25Z"
   },
   "businesses": [
     {
@@ -15,7 +15,7 @@
       "status": "prototype",
       "site_path": "sites/namit-filipino-barbecue-columbia/",
       "added_at": "2026-06-03T23:03:18Z",
-      "updated_at": "2026-06-04T01:51:49Z"
+      "updated_at": "2026-06-04T10:41:35Z"
     },
     {
       "slug": "merriweather-cafe-deli-columbia",
@@ -23,7 +23,7 @@
       "status": "prototype",
       "site_path": "sites/merriweather-cafe-deli-columbia/",
       "added_at": "2026-06-03T23:03:21Z",
-      "updated_at": "2026-06-04T01:51:49Z"
+      "updated_at": "2026-06-04T10:41:35Z"
     },
     {
       "slug": "columbia-nails-hickory-ridge",
@@ -31,7 +31,23 @@
       "status": "prototype",
       "site_path": "sites/columbia-nails-hickory-ridge/",
       "added_at": "2026-06-03T23:03:21Z",
-      "updated_at": "2026-06-04T01:51:49Z"
+      "updated_at": "2026-06-04T10:41:35Z"
+    },
+    {
+      "slug": "kong-pocha-columbia",
+      "name": "Kong Pocha",
+      "status": "prototype",
+      "site_path": "sites/kong-pocha-columbia/",
+      "added_at": "2026-06-04T11:14:07Z",
+      "updated_at": "2026-06-04T11:15:43Z"
+    },
+    {
+      "slug": "el-gran-sabor-columbia",
+      "name": "El Gran Sabor",
+      "status": "prototype",
+      "site_path": "sites/el-gran-sabor-columbia/",
+      "added_at": "2026-06-04T11:14:07Z",
+      "updated_at": "2026-06-04T11:15:43Z"
     }
   ]
 }

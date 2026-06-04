@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Korean comfort food, late-night vibes, legendary fried chicken.">
+  <meta property="og:title" content="Kong Pocha">
+  <meta property="og:description" content="Korean comfort food, late-night vibes, legendary fried chicken.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/ebNZJGWd4zY?w=1400&amp;q=80&amp;fit=crop">
+  <title>Kong Pocha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Kong Pocha</a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__right">
+        <a href="tel:4435420090" class="nav__tel" aria-label="Call us">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.85 9.69 19.73 19.73 0 01.77 1.13 2 2 0 012.76 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.82a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(443) 542-0090</span>
+        </a>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#services">Menu</a></li>
+          <li><a href="#hours">Hours</a></li>
+          <li><a href="#contact" class="btn btn--accent">Reserve</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero" style="background-image:url('https://images.unsplash.com/ebNZJGWd4zY?w=1400&amp;q=80&amp;fit=crop');" aria-label="Kong Pocha">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Korean Restaurant &middot; Columbia, MD</p>
+      <h1 class="hero__title">Kong Pocha</h1>
+      <p class="hero__tagline">Korean comfort food, late-night vibes, legendary fried chicken.</p>
+      <div class="hero__cta">
+        <a href="#services" class="btn btn--accent">View Menu</a>
+        <a href="#contact" class="btn btn--ghost">Get Directions</a>
+      </div>
+      <p class="hero__tel"><a href="tel:4435420090">(443) 542-0090</a></p>
+    </div>
+  </section>
+
+  <section class="story section" id="story">
+    <div class="container story__grid">
+      <div class="story__text">
+        <span class="section-label">Our Story</span>
+        <h2>Kong Pocha</h2>
+        <p>Kong Pocha is Columbia&#x27;s late-night Korean comfort food spot — a rustic-modern eatery with a retro 70s vibe where the fried chicken is legendary and the soju flows freely. Started by Sobin Kang, who built a cult following at the original Baltimore location on W. 20th St, the Columbia outpost brings the same home-cooked Korean fare — kimchi pancakes, spicy rice cakes, smoky BBQ, and crispy chicken in half a dozen styles — to Howard County. Open until 1am most nights. Walk-ins welcome.</p>
+        
+      </div>
+      <div class="story__photo">
+        <img src="https://images.unsplash.com/NOAzwcMzZJA?w=1400&amp;q=80&amp;fit=crop" alt="Kong Pocha food" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="menu section" id="services">
+    <div class="container">
+      <span class="section-label">Menu</span>
+      <h2>Our Menu</h2>
+      <div class="menu-section"><div class="menu-section__title">Starters</div><div class="menu-item"><span class="menu-item__name">Sweet Corn Pancake</span><span class="menu-item__price">$13.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Crispy potato starch pancake with sweet corn and condensed milk.</p></div>
+<div class="menu-item"><span class="menu-item__name">Corn Cheese</span><span class="menu-item__price">$12.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Melted mozzarella baked over sweet corn. Best eaten straight from the skillet.</p></div>
+<div class="menu-item"><span class="menu-item__name">Kimchi Jeon</span><span class="menu-item__price">$13.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Savory kimchi scallion pancake with crispy edges and a chewy center.</p></div>
+<div class="menu-item"><span class="menu-item__name">Tteokbokki (Spicy Rice Cake)</span><span class="menu-item__price">$14.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Chewy rice cakes in a rose cream sauce — spicy, sweet, and completely addictive.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Fried Chicken</div><div class="menu-item"><span class="menu-item__name">Butter Fried Chicken</span><span class="menu-item__price">$32.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Bone-in, golden, buttery, and impossible to stop eating. The signature Kong Pocha bird.</p></div>
+<div class="menu-item"><span class="menu-item__name">Soy Garlic Fried Chicken</span><span class="menu-item__price">$32.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Sticky soy-garlic glaze, crackly outside, juicy inside. A perennial favorite.</p></div>
+<div class="menu-item"><span class="menu-item__name">Spicy Chicken with Cheese</span><span class="menu-item__price">$32.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Double trouble: the heat of gochujang balanced with a blanket of melted cheese.</p></div>
+<div class="menu-item"><span class="menu-item__name">Sweet &amp; Spicy Fried Chicken</span><span class="menu-item__price">$32.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">The original Kong Pocha style. Crowd-pleasing, glossy, and totally satisfying.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">BBQ &amp; Hot Pot</div><div class="menu-item"><span class="menu-item__name">Bulgogi</span><span class="menu-item__price">$22.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Thinly sliced marinated beef, sweet and savory. Served sizzling on the grill.</p></div>
+<div class="menu-item"><span class="menu-item__name">Army Stew (Budae Jjigae)</span><span class="menu-item__price">$28.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">A Korean classic: spam, sausage, ramen noodles, and kimchi in a rich broth.</p></div>
+<div class="menu-item"><span class="menu-item__name">Mala Seafood Cream Udon</span><span class="menu-item__price">$18.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Rich and numbing mala broth with fresh seafood and thick udon noodles.</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Drinks</div><div class="menu-item"><span class="menu-item__name">Soju</span><span class="menu-item__price">$14.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Classic Korean distilled spirit. Served ice cold. Goes with everything.</p></div>
+<div class="menu-item"><span class="menu-item__name">Draft Beer</span><span class="menu-item__price">$7.99</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Korean and domestic options on tap.</p></div>
+<div class="menu-item"><span class="menu-item__name">Soft Drinks</span><span class="menu-item__price">$3.00</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Coke, Sprite, Water.</p></div></div>
+    </div>
+  </section>
+
+  <div class="quote-strip">
+    <div class="container">
+      <blockquote class="quote-strip__text">&#8220;The kind of place where you order one plate of chicken and somehow stay until midnight.&#8221;</blockquote>
+    </div>
+  </div>
+
+  <section class="hours section" id="hours">
+    <div class="container">
+      <span class="section-label">Hours</span>
+      <h2>When We&#8217;re Open</h2>
+      <div class="hours__badge" id="open-now-badge" hidden></div>
+      <div class="hours__pills">
+        <div class="hours__pill open"><span class="hours__pill__day">Mon</span><span class="hours__pill__time">4:00 PM – 1:00 AM</span></div>
+<div class="hours__pill closed"><span class="hours__pill__day">Tue</span><span class="hours__pill__time">Closed</span></div>
+<div class="hours__pill open"><span class="hours__pill__day">Wed</span><span class="hours__pill__time">4:00 PM – 1:00 AM</span></div>
+<div class="hours__pill open"><span class="hours__pill__day">Thu</span><span class="hours__pill__time">4:00 PM – 12:30 AM</span></div>
+<div class="hours__pill open"><span class="hours__pill__day">Fri</span><span class="hours__pill__time">4:00 PM – 2:00 AM</span></div>
+<div class="hours__pill open"><span class="hours__pill__day">Sat</span><span class="hours__pill__time">4:00 PM – 2:00 AM</span></div>
+<div class="hours__pill open"><span class="hours__pill__day">Sun</span><span class="hours__pill__time">4:00 PM – 1:00 AM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery section" id="gallery">
+  <div class="container">
+    <span class="section-label">Gallery</span>
+    <h2>Take a Look Inside</h2>
+    <div class="gallery__grid "><img src="https://images.unsplash.com/ebNZJGWd4zY?w=1400&amp;q=80&amp;fit=crop" alt="Photo 1" loading="lazy">
+<img src="https://images.unsplash.com/NOAzwcMzZJA?w=1400&amp;q=80&amp;fit=crop" alt="Photo 2" loading="lazy">
+<img src="https://images.unsplash.com/gSTum0k61c4?w=1400&amp;q=80&amp;fit=crop" alt="Photo 3" loading="lazy">
+<img src="https://images.unsplash.com/ako8aKb1_2c?w=1400&amp;q=80&amp;fit=crop" alt="Photo 4" loading="lazy">
+<img src="https://images.unsplash.com/LHuEVouFySw?w=1400&amp;q=80&amp;fit=crop" alt="Photo 5" loading="lazy"></div>
+  </div>
+</section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2>Come Dine With Us</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__address">9350 Snowden River Pkwy,<br> Suite J,<br> Columbia,<br> MD 21045</p>
+          <a href="tel:4435420090" class="contact__phone">(443) 542-0090</a>
+          
+          
+        </div>
+        <div class="contact__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.5!2d-76.8185!3d39.2005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7dfc5b8f93a9d%3A0x1234567890abcdef!2s9350+Snowden+River+Pkwy%2C+Columbia%2C+MD+21045!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kong Pocha &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
+    </div>
+  </footer>
+
+  <script>const HOURS_DATA = {"monday": "4:00 PM \u2013 1:00 AM", "tuesday": "Closed", "wednesday": "4:00 PM \u2013 1:00 AM", "thursday": "4:00 PM \u2013 12:30 AM", "friday": "4:00 PM \u2013 2:00 AM", "saturday": "4:00 PM \u2013 2:00 AM", "sunday": "4:00 PM \u2013 1:00 AM"};</script>
+  <script src="script.js"></script>
+</body>
+</html>
