@@ -72,6 +72,14 @@ ul   { list-style: none; }
 .nav__hamburger.open span:nth-child(2) { opacity: 0; }
 .nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+.nav__right { display: flex; align-items: center; gap: 1.75rem; }
+.nav__tel {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .8rem; letter-spacing: .04em; color: var(--text-muted);
+  transition: color var(--ease); white-space: nowrap;
+}
+.nav__tel:hover { color: var(--accent); }
+
 /* ── Buttons ───────────────────────────────────────────── */
 .btn {
   display: inline-block; padding: .7rem 1.8rem; border-radius: var(--radius);
@@ -116,6 +124,14 @@ ul   { list-style: none; }
   color: rgba(255,255,255,.82); margin-bottom: 2.5rem; line-height: 1.55;
 }
 .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero__tel {
+  margin-top: 1.25rem; font-size: .85rem; color: rgba(255,255,255,.55);
+}
+.hero__tel a {
+  color: inherit; border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: color var(--ease), border-color var(--ease);
+}
+.hero__tel a:hover { color: rgba(255,255,255,.9); border-color: rgba(255,255,255,.5); }
 
 /* ── Our Story (light parchment section) ───────────────── */
 .story { background: var(--story-bg); color: var(--story-text); }
@@ -254,6 +270,7 @@ ul   { list-style: none; }
 @media (max-width: 768px) {
   .section { padding: 4rem 0; }
   .nav__hamburger { display: flex; }
+  .nav__tel span { display: none; }
   .nav__links {
     display: none; position: absolute; top: 68px; left: 0; right: 0;
     background: rgba(8,8,8,.97); border-bottom: 1px solid rgba(255,255,255,.06);

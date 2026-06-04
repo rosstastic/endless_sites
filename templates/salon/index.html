@@ -22,12 +22,18 @@
       <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">{{SERVICES_NAV_LABEL}}</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact" class="btn btn--accent">Book Now</a></li>
-      </ul>
+      <div class="nav__right">
+        <a href="tel:{{PHONE}}" class="nav__tel" aria-label="Call us">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.85 9.69 19.73 19.73 0 01.77 1.13 2 2 0 012.76 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.82a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>{{PHONE_DISPLAY}}</span>
+        </a>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">{{SERVICES_NAV_LABEL}}</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact" class="btn btn--accent">Book Now</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -39,9 +45,10 @@
       <h1 class="hero__title">{{BUSINESS_NAME}}</h1>
       <p class="hero__tagline">{{TAGLINE}}</p>
       <div class="hero__cta">
-        <a href="tel:{{PHONE}}" class="btn btn--dark">{{PHONE_DISPLAY}}</a>
-        <a href="#services" class="btn btn--ghost-dark">View Services</a>
+        <a href="#contact" class="btn btn--dark">Book Appointment</a>
+        <a href="#services" class="btn btn--ghost-dark">Our Services</a>
       </div>
+      <p class="hero__tel"><a href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a></p>
     </div>
   </section>
 
