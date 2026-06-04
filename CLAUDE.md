@@ -27,27 +27,61 @@ Target: **5 approved sites**. When reached, print the contact sheet (from `check
 1. Search for Columbia, MD businesses (zip 21044, 21045, 21046) with no website
 2. Fill `meta.json` with gathered data
 3. Run `bash scripts/new-site.sh <slug>` to scaffold the site directory
-4. Fill `meta.json` with complete research data
-5. Run `python3 scripts/fill-template.py <slug>` to generate the site
-6. Deploy: `wrangler pages deploy sites/<slug>/ --project-name=endless-<slug>`
-7. Present to user: site summary, file path, live URL
-8. Record user decision in `meta.json` `review_log[]`
-9. If iterate: edit directly, re-present. If approve: update status, run check-milestone. If abandon: update status, start research.
+4. Read the scaffolded `meta.json` before writing it (Write tool requires a prior Read)
+5. Fill `meta.json` with complete research data
+6. Run `python3 scripts/fill-template.py <slug>` to generate the site
+7. Add the new business card to `index.html` (the GitHub Pages portfolio)
+8. Commit and push to dev branch, then push dev→staging (see Git section below)
+9. Present to user: site summary, file path, GitHub Pages URL
+10. Record user decision in `meta.json` `review_log[]`
+11. If iterate: edit directly, re-present. If approve: update status, run check-milestone. If abandon: update status, start research.
 
 ## Scripts
 - `bash scripts/new-site.sh <slug>` — scaffold site directory from template
 - `python3 scripts/fill-template.py <slug>` — generate site from meta.json data
 - `python3 scripts/check-milestone.py` — show progress, surface contacts at milestone
 
-## Cloudflare Deploy
+## Git — Dev → Staging Protocol
+The GitHub Pages deploy triggers on pushes to `staging`. Always push to dev first, then to staging. **Never force push to staging.**
+
+```bash
+git push -u origin claude/local-business-static-sites-P3Fqm
+git push origin claude/local-business-static-sites-P3Fqm:staging
 ```
-wrangler pages deploy sites/<slug>/ --project-name=endless-<slug>
+
+Before pushing dev→staging, check for divergence:
+```bash
+git log HEAD..origin/staging --oneline
 ```
-URL pattern: `https://endless-<slug>.pages.dev`
+If staging has commits not on dev (e.g. workflow tweaks made directly on staging), cherry-pick them to dev first, then push normally. Any file that belongs in the repo long-term (GitHub Actions workflow, `index.html`) must live on the dev branch — never staging-only.
+
+GitHub Pages portfolio URL: `https://rosstastic.github.io/endless_sites/`  
+Individual site paths: `sites/<slug>/index.html`
+
+## Photo Sourcing (Unsplash)
+Unsplash blocks all server-side fetches (403), so photos cannot be verified programmatically. They work fine in browsers.
+
+To find photo IDs without API access:
+1. Google: `site:unsplash.com/photos "keyword"` (e.g. `site:unsplash.com/photos "korean fried chicken"`)
+2. The last segment of each photo page URL is the CDN slug (e.g. `ebNZJGWd4zY` from `unsplash.com/photos/...ebNZJGWd4zY`)
+3. Use as: `https://images.unsplash.com/{slug}?w=1400&q=80&fit=crop`
+
+Both old-format (`photo-1234...`) and new-format (`ebNZJGWd4zY`) slugs work in this URL pattern.
+
+## Template Routing
+`fill-template.py` picks the template based on the first keyword match in `CATEGORY_TEMPLATES`. The category string in `meta.json` must be set deliberately:
+- `"Korean Restaurant"` → restaurant template (dark cinematic)
+- `"Salvadoran Cafe"` → cafe template (warm parchment) — use "Cafe" not "Restaurant" to avoid routing to restaurant template
+- Check `CATEGORY_TEMPLATES` in `fill-template.py` when adding new cuisine types
+
+## Business Research
+Most restaurant/business listing sites (Yelp, Grubhub, DoorDash) return 403 on WebFetch. Use WebSearch instead — search results provide enough data (address, phone, hours, menu items) without needing to load the page directly.
+
+To verify a business has no website: Google `"<business name>" Columbia MD site:` and check for a standalone domain vs. only delivery/aggregator listings.
 
 ## Key Files
 - `businesses.json` — master registry and milestone counter
+- `index.html` — GitHub Pages portfolio (update whenever a new site is added)
 - `sites/<slug>/meta.json` — per-business data and workflow status
-- `templates/business/index.html` — master template (never edit for a specific site)
-- `templates/business/style.css` — shared stylesheet (copied to each site)
-- `templates/business/script.js` — shared JS (copied to each site)
+- `templates/cafe/`, `templates/restaurant/`, `templates/salon/` — the three template families (never edit for a specific site)
+- `.github/workflows/deploy-pages.yml` — triggers gh-pages deploy on push to staging
