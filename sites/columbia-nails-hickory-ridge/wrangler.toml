@@ -1,0 +1,6 @@
+name = "endless-columbia-nails-hickory-ridge"
+compatibility_date = "2025-01-01"
+
+# Deploy command (run from repo root):
+#   wrangler pages deploy sites/columbia-nails-hickory-ridge/ --project-name=endless-columbia-nails-hickory-ridge
+# Live URL: https://endless-columbia-nails-hickory-ridge.pages.dev

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Filipino flavors — straight from the heart of Cebu">
+  <meta property="og:title" content="Namit Filipino Barbecue">
+  <meta property="og:description" content="Authentic Filipino flavors — straight from the heart of Cebu">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/placeholder-hero.svg">
+  <title>Namit Filipino Barbecue</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --color-primary: #2C3E50;
+      --color-accent: #E67E22;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Namit Filipino Barbecue</a>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Menu</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#contact" class="btn btn--accent">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────── -->
+  <section class="hero" id="hero" style="background-image: url('assets/placeholder-hero.svg');" aria-label="Namit Filipino Barbecue hero">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Restaurant · Columbia, MD</p>
+      <h1 class="hero__title">Namit Filipino Barbecue</h1>
+      <p class="hero__tagline">Authentic Filipino flavors — straight from the heart of Cebu</p>
+      <div class="hero__cta">
+        <a href="tel:4437748969" class="btn btn--accent">Call Us: (443) 774-8969</a>
+        <a href="#about" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6);">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ───────────────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="section-label">About Us</span>
+          <h2>Namit Filipino Barbecue</h2>
+          <p>Namit Filipino Barbecue brings the bold, smoky flavors of the Philippines to Columbia, Maryland. Founded by Maria Tabligan and Paolo Peñalosa — a family from Talisay, Cebu — Namit started as a beloved food truck and is now opening Howard County&#x27;s only Filipino dine-in restaurant. Every skewer, every plate of sisig, every lumpia is made from cherished family recipes passed down through generations.</p>
+          <p><span class="about__badge">Serving Columbia since 2021</span></p>
+        </div>
+        <div class="about__image">
+          <img src="assets/placeholder-hero.svg" alt="Inside Namit Filipino Barbecue" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services / Menu ─────────────────────────────────── -->
+  <section class="services section section--alt" id="services">
+    <div class="container">
+      <span class="section-label">Menu</span>
+      <h2>Our Menu</h2>
+      <div class="menu-section"><div class="menu-section__title">Barbecue Skewers</div><div class="menu-item"><span class="menu-item__name">Pork BBQ Skewer</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Marinated pork grilled over charcoal with a sweet-savory glaze</span></div>
+<div class="menu-item"><span class="menu-item__name">Chicken Inasal</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Grilled chicken marinated in calamansi, ginger, and lemongrass</span></div>
+<div class="menu-item"><span class="menu-item__name">Lechon Chicharron</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Crispy deep-fried pork belly — crackling outside, melt-in-your-mouth inside</span></div></div>
+<div class="menu-section"><div class="menu-section__title">Filipino Classics</div><div class="menu-item"><span class="menu-item__name">Sisig</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Sizzling plate of chopped pork, onions, and chili — a Cebu family staple</span></div>
+<div class="menu-item"><span class="menu-item__name">Lumpia</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Crispy fried egg rolls filled with seasoned pork and vegetables</span></div>
+<div class="menu-item"><span class="menu-item__name">Pancit</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Stir-fried glass noodles with vegetables and choice of protein</span></div></div>
+<div class="menu-section"><div class="menu-section__title">Desserts</div><div class="menu-item"><span class="menu-item__name">Ube Cheesecake</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Creamy cheesecake made with ube (purple yam) — a Filipino classic</span></div>
+<div class="menu-item"><span class="menu-item__name">Guava Cheesecake</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Light, fruity cheesecake with a tropical guava finish</span></div></div>
+    </div>
+  </section>
+
+  <!-- ── Hours ───────────────────────────────────────────── -->
+  <section class="hours section" id="hours">
+    <div class="container">
+      <span class="section-label">Hours</span>
+      <h2>When We're Open</h2>
+      <div class="hours__card">
+        <div class="hours__badge" id="open-now-badge" hidden></div>
+        <table class="hours__table" aria-label="Business hours">
+          <tbody>
+            <tr><td>Monday</td><td>Closed</td></tr>
+            <tr><td>Tuesday</td><td>Closed</td></tr>
+            <tr><td>Wednesday</td><td>11:00 AM – 2:00 PM</td></tr>
+            <tr><td>Thursday</td><td>Closed</td></tr>
+            <tr><td>Friday</td><td>11:00 AM – 2:00 PM</td></tr>
+            <tr><td>Saturday</td><td>11:00 AM – 2:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Gallery ─────────────────────────────────────────── -->
+  
+
+  <!-- ── Contact ─────────────────────────────────────────── -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h2>Find Us</h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__address">9200 Old Annapolis Rd,<br> Columbia,<br> MD 21045</p>
+          <a href="tel:4437748969" class="contact__phone">(443) 774-8969</a>
+          
+          
+        </div>
+        <div class="contact__map">
+          <iframe src="https://maps.google.com/maps?q=9200+Old+Annapolis+Rd+Columbia+MD&amp;output=embed" allowfullscreen loading="lazy" title="Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Namit Filipino Barbecue &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const HOURS_DATA = {"monday": "Closed", "tuesday": "Closed", "wednesday": "11:00 AM \u2013 2:00 PM", "thursday": "Closed", "friday": "11:00 AM \u2013 2:00 PM", "saturday": "11:00 AM \u2013 2:00 PM", "sunday": "Closed"};
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+  "slug": "namit-filipino-barbecue-columbia",
+  "status": "prototype",
+  "business": {
+    "name": "Namit Filipino Barbecue",
+    "tagline": "Authentic Filipino flavors \u2014 straight from the heart of Cebu",
+    "description": "Namit Filipino Barbecue brings the bold, smoky flavors of the Philippines to Columbia, Maryland. Founded by Maria Tabligan and Paolo Pe\u00f1alosa \u2014 a family from Talisay, Cebu \u2014 Namit started as a beloved food truck and is now opening Howard County's only Filipino dine-in restaurant. Every skewer, every plate of sisig, every lumpia is made from cherished family recipes passed down through generations.",
+    "category": "Restaurant",
+    "address": "9200 Old Annapolis Rd, Columbia, MD 21045",
+    "phone": "(443) 774-8969",
+    "email": null,
+    "year_founded": 2021,
+    "hours": {
+      "monday": "Closed",
+      "tuesday": "Closed",
+      "wednesday": "11:00 AM \u2013 2:00 PM",
+      "thursday": "Closed",
+      "friday": "11:00 AM \u2013 2:00 PM",
+      "saturday": "11:00 AM \u2013 2:00 PM",
+      "sunday": "Closed"
+    },
+    "services_or_menu": [
+      {
+        "section": "Barbecue Skewers",
+        "items": [
+          {
+            "name": "Pork BBQ Skewer",
+            "price": "",
+            "description": "Marinated pork grilled over charcoal with a sweet-savory glaze"
+          },
+          {
+            "name": "Chicken Inasal",
+            "price": "",
+            "description": "Grilled chicken marinated in calamansi, ginger, and lemongrass"
+          },
+          {
+            "name": "Lechon Chicharron",
+            "price": "",
+            "description": "Crispy deep-fried pork belly \u2014 crackling outside, melt-in-your-mouth inside"
+          }
+        ]
+      },
+      {
+        "section": "Filipino Classics",
+        "items": [
+          {
+            "name": "Sisig",
+            "price": "",
+            "description": "Sizzling plate of chopped pork, onions, and chili \u2014 a Cebu family staple"
+          },
+          {
+            "name": "Lumpia",
+            "price": "",
+            "description": "Crispy fried egg rolls filled with seasoned pork and vegetables"
+          },
+          {
+            "name": "Pancit",
+            "price": "",
+            "description": "Stir-fried glass noodles with vegetables and choice of protein"
+          }
+        ]
+      },
+      {
+        "section": "Desserts",
+        "items": [
+          {
+            "name": "Ube Cheesecake",
+            "price": "",
+            "description": "Creamy cheesecake made with ube (purple yam) \u2014 a Filipino classic"
+          },
+          {
+            "name": "Guava Cheesecake",
+            "price": "",
+            "description": "Light, fruity cheesecake with a tropical guava finish"
+          }
+        ]
+      }
+    ],
+    "google_maps_embed_url": "https://maps.google.com/maps?q=9200+Old+Annapolis+Rd+Columbia+MD&output=embed",
+    "yelp_url": "https://www.yelp.com/biz/namit-filipino-barbecue-columbia",
+    "photos_found": []
+  },
+  "owner": {
+    "name": "Maria Tabligan & Paolo Pe\u00f1alosa",
+    "contact_phone": "(443) 774-8969",
+    "contact_email": "",
+    "contact_source": "Baltimore Banner article, Baltimore Magazine article"
+  },
+  "research": {
+    "sources_checked": [
+      "Yelp",
+      "Baltimore Banner",
+      "Baltimore Magazine",
+      "Facebook",
+      "Instagram",
+      "Roadtrippers"
+    ],
+    "has_existing_website": false,
+    "website_check_notes": "No domain found. Facebook (facebook.com/namitFilipinobbq) and Instagram (@namitfilipinobbq) only. Clover used for online ordering. No URL on Yelp or Google Maps listing.",
+    "researched_at": "2026-06-03T22:00:00Z"
+  },
+  "review_log": [],
+  "deploy": {
+    "cloudflare_project_name": "endless-namit-filipino-barbecue-columbia",
+    "last_deployed_url": null,
+    "deployed_at": null
+  }
+}

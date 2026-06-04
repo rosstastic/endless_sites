@@ -1,0 +1,112 @@
+{
+  "slug": "columbia-nails-hickory-ridge",
+  "status": "prototype",
+  "business": {
+    "name": "Columbia Nails",
+    "tagline": "Professional nail care in the heart of Hickory Ridge \u2014 walk-ins always welcome",
+    "description": "Columbia Nails has been a trusted neighborhood nail salon in Columbia's Hickory Ridge community for years. Our skilled technicians \u2014 including Vivian, Ann, and Katie \u2014 deliver meticulous manicures, luxurious pedicures, and expert nail enhancements in a clean, relaxing environment. Whether you're stopping in for a quick polish change or a full spa pedicure, you'll leave looking and feeling your best.",
+    "category": "Nail Salon",
+    "address": "10801 Hickory Ridge Rd, Ste 102, Columbia, MD 21044",
+    "phone": "(410) 964-6411",
+    "email": null,
+    "year_founded": null,
+    "hours": {
+      "monday": "10:00 AM \u2013 7:00 PM",
+      "tuesday": "10:00 AM \u2013 7:00 PM",
+      "wednesday": "10:00 AM \u2013 7:00 PM",
+      "thursday": "10:00 AM \u2013 7:00 PM",
+      "friday": "10:00 AM \u2013 7:00 PM",
+      "saturday": "9:00 AM \u2013 5:00 PM",
+      "sunday": "Closed"
+    },
+    "services_or_menu": [
+      {
+        "section": "Manicures",
+        "items": [
+          {
+            "name": "Classic Manicure",
+            "price": "",
+            "description": "Nail shaping, cuticle care, and your choice of polish color"
+          },
+          {
+            "name": "Gel Manicure",
+            "price": "",
+            "description": "Long-lasting gel polish that stays chip-free for weeks"
+          },
+          {
+            "name": "Kids Manicure",
+            "price": "",
+            "description": "A fun nail experience sized just right for little ones"
+          }
+        ]
+      },
+      {
+        "section": "Pedicures",
+        "items": [
+          {
+            "name": "Classic Pedicure",
+            "price": "",
+            "description": "Foot soak, nail care, callus removal, and polish"
+          },
+          {
+            "name": "Spa Pedicure",
+            "price": "",
+            "description": "Upgraded treatment with exfoliation, mask, and extended massage"
+          },
+          {
+            "name": "Gel Pedicure",
+            "price": "",
+            "description": "Gel polish pedicure for long-lasting color and shine"
+          }
+        ]
+      },
+      {
+        "section": "Enhancements",
+        "items": [
+          {
+            "name": "Acrylic Full Set",
+            "price": "",
+            "description": "Full set of acrylic nails, shaped and finished to your preference"
+          },
+          {
+            "name": "Dip Powder Nails",
+            "price": "",
+            "description": "Durable dip powder application \u2014 no UV light, odorless"
+          },
+          {
+            "name": "Acrylic Fill",
+            "price": "",
+            "description": "Fill-in for existing acrylic set"
+          }
+        ]
+      }
+    ],
+    "google_maps_embed_url": "https://maps.google.com/maps?q=10801+Hickory+Ridge+Rd+Columbia+MD+21044&output=embed",
+    "yelp_url": "https://www.yelp.com/biz/columbia-nails-columbia",
+    "photos_found": []
+  },
+  "owner": {
+    "name": "Vivian (technician / likely owner)",
+    "contact_phone": "(410) 964-6411",
+    "contact_email": "",
+    "contact_source": "Yelp reviews mention Vivian, Ann, and Katie by name; Yelp listing is unclaimed"
+  },
+  "research": {
+    "sources_checked": [
+      "Yelp",
+      "Belliata",
+      "Nextdoor",
+      "CMac.ws",
+      "Chamber of Commerce"
+    ],
+    "has_existing_website": false,
+    "website_check_notes": "Only result is auto-generated scraper page at columbia-nails.com-place.com \u2014 not a real business website. Yelp listing is unclaimed. No URL on any listing.",
+    "researched_at": "2026-06-03T22:00:00Z"
+  },
+  "review_log": [],
+  "deploy": {
+    "cloudflare_project_name": "endless-columbia-nails-hickory-ridge",
+    "last_deployed_url": null,
+    "deployed_at": null
+  }
+}

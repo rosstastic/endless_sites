@@ -1,0 +1,6 @@
+name = "endless-merriweather-cafe-deli-columbia"
+compatibility_date = "2025-01-01"
+
+# Deploy command (run from repo root):
+#   wrangler pages deploy sites/merriweather-cafe-deli-columbia/ --project-name=endless-merriweather-cafe-deli-columbia
+# Live URL: https://endless-merriweather-cafe-deli-columbia.pages.dev
