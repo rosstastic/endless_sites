@@ -76,9 +76,16 @@
         ]
       }
     ],
+    "hero_image_url": "https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=1400&q=80&fit=crop",
+    "photos_found": [
+      "https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1400&q=80&fit=crop"
+    ],
+    "pull_quote": "Every skewer, every plate of sisig \u2014 made from recipes passed down through generations in Cebu.",
     "google_maps_embed_url": "https://maps.google.com/maps?q=9200+Old+Annapolis+Rd+Columbia+MD&output=embed",
-    "yelp_url": "https://www.yelp.com/biz/namit-filipino-barbecue-columbia",
-    "photos_found": []
+    "yelp_url": "https://www.yelp.com/biz/namit-filipino-barbecue-columbia"
   },
   "owner": {
     "name": "Maria Tabligan & Paolo Pe\u00f1alosa",

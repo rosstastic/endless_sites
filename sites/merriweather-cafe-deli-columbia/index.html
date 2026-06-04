@@ -7,19 +7,15 @@
   <meta property="og:title" content="Merriweather Cafe &amp; Deli">
   <meta property="og:description" content="Your neighborhood deli — great coffee, handmade sandwiches, and a warm welcome every morning">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/placeholder-hero.svg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&amp;q=80&amp;fit=crop">
   <title>Merriweather Cafe &amp; Deli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --color-primary: #3E2723;
-      --color-accent: #D4A853;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ── Navigation ──────────────────────────────────────── -->
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
       <a href="#" class="nav__logo">Merriweather Cafe &amp; Deli</a>
@@ -30,62 +26,74 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Menu</a></li>
         <li><a href="#hours">Hours</a></li>
-        <li><a href="#contact" class="btn btn--accent">Contact</a></li>
+        <li><a href="#contact" class="btn btn--accent">Visit Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ── Hero ────────────────────────────────────────────── -->
-  <section class="hero" id="hero" style="background-image: url('assets/placeholder-hero.svg');" aria-label="Merriweather Cafe &amp; Deli hero">
+  <section class="hero" id="hero" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&amp;q=80&amp;fit=crop');" aria-label="Merriweather Cafe &amp; Deli">
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">Cafe · Columbia, MD</p>
+      <p class="hero__eyebrow">Cafe &middot; Columbia, MD</p>
       <h1 class="hero__title">Merriweather Cafe &amp; Deli</h1>
       <p class="hero__tagline">Your neighborhood deli — great coffee, handmade sandwiches, and a warm welcome every morning</p>
       <div class="hero__cta">
-        <a href="tel:4109920100" class="btn btn--accent">Call Us: (410) 992-0100</a>
-        <a href="#about" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,.6);">Learn More</a>
+        <a href="tel:4109920100" class="btn btn--accent">(410) 992-0100</a>
+        <a href="#services" class="btn btn--outline">See the Menu</a>
       </div>
     </div>
   </section>
 
-  <!-- ── About ───────────────────────────────────────────── -->
   <section class="about section" id="about">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__text">
-          <span class="section-label">About Us</span>
-          <h2>Merriweather Cafe &amp; Deli</h2>
-          <p>Merriweather Cafe &amp; Deli is a beloved Columbia gem nestled in the heart of the Merriweather District. Run by Mrs. Connie, this neighborhood deli serves up fresh-made sandwiches, quality coffee, and the kind of genuine hospitality you simply can&#x27;t find at a chain. Regulars make the trip every morning just for the breakfast sandwiches and the welcoming atmosphere.</p>
-          
-        </div>
-        <div class="about__image">
-          <img src="assets/placeholder-hero.svg" alt="Inside Merriweather Cafe &amp; Deli" loading="lazy">
-        </div>
+    <div class="container about__grid">
+      <div class="about__text">
+        <span class="section-label">About</span>
+        <h2>Merriweather Cafe &amp; Deli</h2>
+        <p>Merriweather Cafe &amp; Deli is a beloved Columbia gem nestled in the heart of the Merriweather District. Run by Mrs. Connie, this neighborhood deli serves up fresh-made sandwiches, quality coffee, and the kind of genuine hospitality you simply can&#x27;t find at a chain. Regulars make the trip every morning just for the breakfast sandwiches and the welcoming atmosphere.</p>
+        
+      </div>
+      <div class="about__photo">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&amp;q=80&amp;fit=crop" alt="Inside Merriweather Cafe &amp; Deli" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ── Services / Menu ─────────────────────────────────── -->
-  <section class="services section section--alt" id="services">
+  <section class="favorites section" id="favorites">
+    <div class="container">
+      <span class="section-label">Crowd Favorites</span>
+      <h2>What People Come For</h2>
+      <div class="favorites__grid"><div class="fav-card" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Breakfast</p><h3 class="fav-card__name">Breakfast Sandwich</h3><p class="fav-card__desc">Fresh egg, your choice of meat and cheese on a toasted roll</p></div></div>
+<div class="fav-card" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Sandwiches &amp; Wraps</p><h3 class="fav-card__name">The Powerhouse</h3><p class="fav-card__desc">Our signature stacked sandwich — ask Mrs. Connie what&#x27;s in it today</p></div></div>
+<div class="fav-card" style="background-image:url('https://images.unsplash.com/fxE8gqRI6YE?w=1400&amp;q=80&amp;fit=crop')"><div class="fav-card__overlay"></div><div class="fav-card__body"><p class="fav-card__cat">Drinks</p><h3 class="fav-card__name">Fresh Coffee</h3><p class="fav-card__desc">Drip, espresso, latte — brewed fresh all morning</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="menu section section--light" id="services">
     <div class="container">
       <span class="section-label">Menu</span>
       <h2>Our Menu</h2>
-      <div class="menu-section"><div class="menu-section__title">Breakfast</div><div class="menu-item"><span class="menu-item__name">Breakfast Sandwich</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Fresh egg, your choice of meat and cheese on a toasted roll</span></div>
-<div class="menu-item"><span class="menu-item__name">Morning Coffee</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Freshly brewed drip coffee or espresso drinks</span></div></div>
-<div class="menu-section"><div class="menu-section__title">Sandwiches &amp; Wraps</div><div class="menu-item"><span class="menu-item__name">The Powerhouse</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Our signature stacked sandwich — ask Mrs. Connie what&#x27;s in it today</span></div>
-<div class="menu-item"><span class="menu-item__name">Turkey on Pita</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Sliced turkey with fresh vegetables on warm pita</span></div>
-<div class="menu-item"><span class="menu-item__name">Veggie Sandwich</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Seasonal vegetables, hummus, and greens on your choice of bread</span></div></div>
-<div class="menu-section"><div class="menu-section__title">Drinks</div><div class="menu-item"><span class="menu-item__name">Fresh Coffee</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Drip, espresso, latte — brewed fresh all morning</span></div>
-<div class="menu-item"><span class="menu-item__name">Juice &amp; Beverages</span></div><div class="menu-item" style="padding-top:0;border:none"><span class="menu-item__desc">Bottled juices, sparkling water, and daily specials</span></div></div>
+      <div class="menu-section"><div class="menu-section__title">Breakfast</div><div class="menu-item"><span class="menu-item__name">Breakfast Sandwich</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Fresh egg, your choice of meat and cheese on a toasted roll</p></div>
+<div class="menu-item"><span class="menu-item__name">Morning Coffee</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Freshly brewed drip coffee or espresso drinks</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Sandwiches &amp; Wraps</div><div class="menu-item"><span class="menu-item__name">The Powerhouse</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Our signature stacked sandwich — ask Mrs. Connie what&#x27;s in it today</p></div>
+<div class="menu-item"><span class="menu-item__name">Turkey on Pita</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Sliced turkey with fresh vegetables on warm pita</p></div>
+<div class="menu-item"><span class="menu-item__name">Veggie Sandwich</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Seasonal vegetables, hummus, and greens on your choice of bread</p></div></div>
+<div class="menu-section"><div class="menu-section__title">Drinks</div><div class="menu-item"><span class="menu-item__name">Fresh Coffee</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Drip, espresso, latte — brewed fresh all morning</p></div>
+<div class="menu-item"><span class="menu-item__name">Juice &amp; Beverages</span></div><div class="menu-item__desc-row"><p class="menu-item__desc">Bottled juices, sparkling water, and daily specials</p></div></div>
     </div>
   </section>
 
-  <!-- ── Hours ───────────────────────────────────────────── -->
+  <div class="testimonial">
+    <div class="container">
+      <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote class="testimonial__quote">&#8220;Mrs. Connie makes you feel like family from the moment you walk in. Best breakfast sandwich in Columbia, hands down.&#8221;</blockquote>
+      <cite class="testimonial__author">Regular customer, Yelp review</cite>
+    </div>
+  </div>
+
   <section class="hours section" id="hours">
     <div class="container">
       <span class="section-label">Hours</span>
-      <h2>When We're Open</h2>
+      <h2>When We&#8217;re Open</h2>
       <div class="hours__card">
         <div class="hours__badge" id="open-now-badge" hidden></div>
         <table class="hours__table" aria-label="Business hours">
@@ -103,13 +111,9 @@
     </div>
   </section>
 
-  <!-- ── Gallery ─────────────────────────────────────────── -->
-  
-
-  <!-- ── Contact ─────────────────────────────────────────── -->
-  <section class="contact section section--alt" id="contact">
+  <section class="contact section section--light" id="contact">
     <div class="container">
-      <span class="section-label">Get In Touch</span>
+      <span class="section-label">Come Say Hi</span>
       <h2>Find Us</h2>
       <div class="contact__grid">
         <div class="contact__info">
@@ -125,16 +129,13 @@
     </div>
   </section>
 
-  <!-- ── Footer ──────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2026 Merriweather Cafe &amp; Deli &middot; Columbia, MD &middot; Site by <a href="#">Endless Sites</a></p>
     </div>
   </footer>
 
-  <script>
-    const HOURS_DATA = {"monday": "7:00 AM \u2013 4:00 PM", "tuesday": "7:00 AM \u2013 4:00 PM", "wednesday": "7:00 AM \u2013 4:00 PM", "thursday": "7:00 AM \u2013 4:00 PM", "friday": "7:00 AM \u2013 4:00 PM", "saturday": "Closed", "sunday": "Closed"};
-  </script>
+  <script>const HOURS_DATA = {"monday": "7:00 AM \u2013 4:00 PM", "tuesday": "7:00 AM \u2013 4:00 PM", "wednesday": "7:00 AM \u2013 4:00 PM", "thursday": "7:00 AM \u2013 4:00 PM", "friday": "7:00 AM \u2013 4:00 PM", "saturday": "Closed", "sunday": "Closed"};</script>
   <script src="script.js"></script>
 </body>
 </html>

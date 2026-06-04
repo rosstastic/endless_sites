@@ -71,9 +71,17 @@
         ]
       }
     ],
+    "hero_image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&q=80&fit=crop",
+    "photos_found": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/fxE8gqRI6YE?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1400&q=80&fit=crop"
+    ],
+    "testimonial_quote": "Mrs. Connie makes you feel like family from the moment you walk in. Best breakfast sandwich in Columbia, hands down.",
+    "testimonial_author": "Regular customer, Yelp review",
     "google_maps_embed_url": "https://maps.google.com/maps?q=10980+Grantchester+Way+Columbia+MD+21044&output=embed",
-    "yelp_url": "https://www.yelp.com/biz/merriweather-cafe-and-deli-columbia",
-    "photos_found": []
+    "yelp_url": "https://www.yelp.com/biz/merriweather-cafe-and-deli-columbia"
   },
   "owner": {
     "name": "Mrs. Connie",

@@ -81,9 +81,16 @@
         ]
       }
     ],
+    "hero_image_url": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1400&q=80&fit=crop",
+    "photos_found": [
+      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1560869713-da86a9ec0744?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=1400&q=80&fit=crop"
+    ],
     "google_maps_embed_url": "https://maps.google.com/maps?q=10801+Hickory+Ridge+Rd+Columbia+MD+21044&output=embed",
-    "yelp_url": "https://www.yelp.com/biz/columbia-nails-columbia",
-    "photos_found": []
+    "yelp_url": "https://www.yelp.com/biz/columbia-nails-columbia"
   },
   "owner": {
     "name": "Vivian (technician / likely owner)",
