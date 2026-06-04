@@ -39,9 +39,18 @@ CATEGORY_COLORS = {
 DEFAULT_COLORS = ("#2C3E50", "#3498DB")
 
 CATEGORY_TEMPLATES = {
+    "korean":     "restaurant",
+    "japanese":   "restaurant",
+    "chinese":    "restaurant",
+    "thai":       "restaurant",
+    "vietnamese": "restaurant",
     "restaurant": "restaurant",
     "bar":        "restaurant",
     "food":       "restaurant",
+    "salvadoran": "cafe",
+    "mexican":    "cafe",
+    "latin":      "cafe",
+    "caribbean":  "restaurant",
     "cafe":       "cafe",
     "bakery":     "cafe",
     "deli":       "cafe",

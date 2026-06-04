@@ -1,0 +1,177 @@
+{
+  "slug": "el-gran-sabor-columbia",
+  "status": "prototype",
+  "business": {
+    "name": "El Gran Sabor",
+    "tagline": "Authentic Salvadoran & Mexican home cooking in Columbia, MD.",
+    "description": "El Gran Sabor is a family-run Salvadoran and Mexican kitchen tucked into Oakland Mills. The hand-pressed pupusas \u2014 filled with chicharr\u00f3n, cheese, or loroco \u2014 are made fresh to order. Fajitas arrive on a sizzling cast iron plate, the tacos come loaded and generously portioned, and the homemade chips and salsa are worth the trip alone. Everything tastes like it was cooked by someone who loves food. Because it was.",
+    "category": "Salvadoran Cafe",
+    "address": "5865 Robert Oliver Place, Unit D, Columbia, MD 21045",
+    "phone": "(443) 258-9975",
+    "email": "",
+    "year_founded": null,
+    "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.5!2d-76.8335!3d39.2015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7df7b5f93a9d%3A0xabcdef1234567890!2s5865+Robert+Oliver+Pl%2C+Columbia%2C+MD+21045!5e0!3m2!1sen!2sus!4v1234567890",
+    "hours": {
+      "monday": "11:00 AM \u2013 9:00 PM",
+      "tuesday": "11:00 AM \u2013 9:00 PM",
+      "wednesday": "11:00 AM \u2013 9:00 PM",
+      "thursday": "11:00 AM \u2013 9:00 PM",
+      "friday": "11:00 AM \u2013 9:00 PM",
+      "saturday": "11:00 AM \u2013 9:00 PM",
+      "sunday": "Closed"
+    },
+    "hero_image_url": "https://images.unsplash.com/cYHbHxVCwDs?w=1400&q=80&fit=crop",
+    "photos_found": [
+      "https://images.unsplash.com/cYHbHxVCwDs?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/3R9mIWSbYKo?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/Om92MLYXV2g?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/n1o-5HRYlmU?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/5mpht0M5H0E?w=1400&q=80&fit=crop"
+    ],
+    "testimonial_quote": "The pupusas are some of the best I've had \u2014 homemade, crispy on the outside and perfectly filled. The carne asada tacos are packed with flavor. This place is a hidden gem.",
+    "testimonial_author": "Google reviewer, Oakland Mills",
+    "yelp_url": "https://www.yelp.com/biz/el-gran-sabor-columbia",
+    "services_or_menu": [
+      {
+        "section": "Pupusas",
+        "items": [
+          {
+            "name": "Chicharr\u00f3n",
+            "price": "$3.50",
+            "description": "Seasoned ground pork, crispy and savory. Made fresh and griddled to order."
+          },
+          {
+            "name": "Queso",
+            "price": "$3.25",
+            "description": "Melted cheese inside a golden corn masa shell. Simple and satisfying."
+          },
+          {
+            "name": "Loroco con Queso",
+            "price": "$3.50",
+            "description": "Edible loroco flower buds with melted cheese \u2014 a true Salvadoran classic."
+          },
+          {
+            "name": "Frijoles con Queso",
+            "price": "$3.25",
+            "description": "Creamy black beans and cheese pressed inside fresh-made masa."
+          },
+          {
+            "name": "Revueltas",
+            "price": "$3.75",
+            "description": "Chicharr\u00f3n, beans, and cheese together \u2014 the full experience in one bite."
+          }
+        ]
+      },
+      {
+        "section": "Tacos",
+        "items": [
+          {
+            "name": "Carne Asada",
+            "price": "$3.75",
+            "description": "Grilled skirt steak on handmade corn tortillas, topped with onion, cilantro, and lime."
+          },
+          {
+            "name": "Carnitas",
+            "price": "$3.75",
+            "description": "Slow-braised pork, crispy on the edges, rich and tender inside."
+          },
+          {
+            "name": "Al Pastor",
+            "price": "$3.75",
+            "description": "Marinated pork with a hint of pineapple \u2014 tangy, sweet, and full of flavor."
+          },
+          {
+            "name": "Lengua",
+            "price": "$4.00",
+            "description": "Tender beef tongue, slow-cooked until melt-in-your-mouth soft."
+          },
+          {
+            "name": "Pollo",
+            "price": "$3.50",
+            "description": "Seasoned grilled chicken on fresh corn tortillas."
+          }
+        ]
+      },
+      {
+        "section": "Fajitas",
+        "items": [
+          {
+            "name": "Fajitas El Gran Sabor",
+            "price": "$16.99",
+            "description": "Carne asada on a sizzling cast iron skillet with peppers, onion, and all the fixings."
+          },
+          {
+            "name": "Pollo Fajitas",
+            "price": "$15.99",
+            "description": "Grilled chicken breast with saut\u00e9ed peppers and onion."
+          },
+          {
+            "name": "Camar\u00f3n Fajitas",
+            "price": "$17.99",
+            "description": "Saut\u00e9ed shrimp in garlic butter with peppers and onion."
+          }
+        ]
+      },
+      {
+        "section": "Burritos & Tortas",
+        "items": [
+          {
+            "name": "Carne Asada Burrito",
+            "price": "$11.99",
+            "description": "Large flour tortilla stuffed with grilled steak, rice, beans, and pico de gallo."
+          },
+          {
+            "name": "Veggie Burrito",
+            "price": "$10.99",
+            "description": "Grilled seasonal vegetables and black beans in a warm flour tortilla."
+          },
+          {
+            "name": "Torta El Gran Sabor",
+            "price": "$12.99",
+            "description": "Toasted bolillo roll with carne asada, avocado, jalape\u00f1os, and house salsa."
+          }
+        ]
+      },
+      {
+        "section": "Sopas",
+        "items": [
+          {
+            "name": "Sopa de Pollo",
+            "price": "$10.99",
+            "description": "Comforting chicken soup with vegetables, noodles, and fresh herbs."
+          },
+          {
+            "name": "Sopa de Mariscos",
+            "price": "$14.99",
+            "description": "Hearty seafood soup \u2014 a weekend favorite when it's available."
+          }
+        ]
+      }
+    ]
+  },
+  "owner": {
+    "name": "El Gran Sabor family",
+    "contact_phone": "(443) 258-9975",
+    "contact_email": "",
+    "contact_source": "Yelp listing / DoorDash"
+  },
+  "research": {
+    "sources_checked": [
+      "Yelp",
+      "DoorDash",
+      "Grubhub",
+      "Uber Eats",
+      "Toast",
+      "Chamber of Commerce"
+    ],
+    "has_existing_website": false,
+    "website_check_notes": "No standalone website found. Online presence via DoorDash, Grubhub, Uber Eats, Toast ordering page, and various restaurant aggregators only. No dedicated domain.",
+    "researched_at": "2026-06-04T11:14:07Z"
+  },
+  "review_log": [],
+  "deploy": {
+    "cloudflare_project_name": "endless-el-gran-sabor-columbia",
+    "last_deployed_url": null,
+    "deployed_at": null
+  }
+}

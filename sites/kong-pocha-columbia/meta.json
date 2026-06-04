@@ -1,0 +1,151 @@
+{
+  "slug": "kong-pocha-columbia",
+  "status": "prototype",
+  "business": {
+    "name": "Kong Pocha",
+    "tagline": "Korean comfort food, late-night vibes, legendary fried chicken.",
+    "description": "Kong Pocha is Columbia's late-night Korean comfort food spot \u2014 a rustic-modern eatery with a retro 70s vibe where the fried chicken is legendary and the soju flows freely. Started by Sobin Kang, who built a cult following at the original Baltimore location on W. 20th St, the Columbia outpost brings the same home-cooked Korean fare \u2014 kimchi pancakes, spicy rice cakes, smoky BBQ, and crispy chicken in half a dozen styles \u2014 to Howard County. Open until 1am most nights. Walk-ins welcome.",
+    "category": "Korean Restaurant",
+    "address": "9350 Snowden River Pkwy, Suite J, Columbia, MD 21045",
+    "phone": "(443) 542-0090",
+    "email": "",
+    "year_founded": null,
+    "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.5!2d-76.8185!3d39.2005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7dfc5b8f93a9d%3A0x1234567890abcdef!2s9350+Snowden+River+Pkwy%2C+Columbia%2C+MD+21045!5e0!3m2!1sen!2sus!4v1234567890",
+    "hours": {
+      "monday": "4:00 PM \u2013 1:00 AM",
+      "tuesday": "Closed",
+      "wednesday": "4:00 PM \u2013 1:00 AM",
+      "thursday": "4:00 PM \u2013 12:30 AM",
+      "friday": "4:00 PM \u2013 2:00 AM",
+      "saturday": "4:00 PM \u2013 2:00 AM",
+      "sunday": "4:00 PM \u2013 1:00 AM"
+    },
+    "hero_image_url": "https://images.unsplash.com/ebNZJGWd4zY?w=1400&q=80&fit=crop",
+    "photos_found": [
+      "https://images.unsplash.com/ebNZJGWd4zY?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/NOAzwcMzZJA?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/gSTum0k61c4?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/ako8aKb1_2c?w=1400&q=80&fit=crop",
+      "https://images.unsplash.com/LHuEVouFySw?w=1400&q=80&fit=crop"
+    ],
+    "pull_quote": "The kind of place where you order one plate of chicken and somehow stay until midnight.",
+    "yelp_url": "https://www.yelp.com/biz/kong-pocha-columbia",
+    "services_or_menu": [
+      {
+        "section": "Starters",
+        "items": [
+          {
+            "name": "Sweet Corn Pancake",
+            "price": "$13.99",
+            "description": "Crispy potato starch pancake with sweet corn and condensed milk."
+          },
+          {
+            "name": "Corn Cheese",
+            "price": "$12.99",
+            "description": "Melted mozzarella baked over sweet corn. Best eaten straight from the skillet."
+          },
+          {
+            "name": "Kimchi Jeon",
+            "price": "$13.99",
+            "description": "Savory kimchi scallion pancake with crispy edges and a chewy center."
+          },
+          {
+            "name": "Tteokbokki (Spicy Rice Cake)",
+            "price": "$14.99",
+            "description": "Chewy rice cakes in a rose cream sauce \u2014 spicy, sweet, and completely addictive."
+          }
+        ]
+      },
+      {
+        "section": "Fried Chicken",
+        "items": [
+          {
+            "name": "Butter Fried Chicken",
+            "price": "$32.99",
+            "description": "Bone-in, golden, buttery, and impossible to stop eating. The signature Kong Pocha bird."
+          },
+          {
+            "name": "Soy Garlic Fried Chicken",
+            "price": "$32.99",
+            "description": "Sticky soy-garlic glaze, crackly outside, juicy inside. A perennial favorite."
+          },
+          {
+            "name": "Spicy Chicken with Cheese",
+            "price": "$32.99",
+            "description": "Double trouble: the heat of gochujang balanced with a blanket of melted cheese."
+          },
+          {
+            "name": "Sweet & Spicy Fried Chicken",
+            "price": "$32.99",
+            "description": "The original Kong Pocha style. Crowd-pleasing, glossy, and totally satisfying."
+          }
+        ]
+      },
+      {
+        "section": "BBQ & Hot Pot",
+        "items": [
+          {
+            "name": "Bulgogi",
+            "price": "$22.99",
+            "description": "Thinly sliced marinated beef, sweet and savory. Served sizzling on the grill."
+          },
+          {
+            "name": "Army Stew (Budae Jjigae)",
+            "price": "$28.99",
+            "description": "A Korean classic: spam, sausage, ramen noodles, and kimchi in a rich broth."
+          },
+          {
+            "name": "Mala Seafood Cream Udon",
+            "price": "$18.99",
+            "description": "Rich and numbing mala broth with fresh seafood and thick udon noodles."
+          }
+        ]
+      },
+      {
+        "section": "Drinks",
+        "items": [
+          {
+            "name": "Soju",
+            "price": "$14.99",
+            "description": "Classic Korean distilled spirit. Served ice cold. Goes with everything."
+          },
+          {
+            "name": "Draft Beer",
+            "price": "$7.99",
+            "description": "Korean and domestic options on tap."
+          },
+          {
+            "name": "Soft Drinks",
+            "price": "$3.00",
+            "description": "Coke, Sprite, Water."
+          }
+        ]
+      }
+    ]
+  },
+  "owner": {
+    "name": "Sobin Kang",
+    "contact_phone": "(443) 542-0090",
+    "contact_email": "",
+    "contact_source": "Baltimore Banner article"
+  },
+  "research": {
+    "sources_checked": [
+      "Yelp",
+      "DoorDash",
+      "Grubhub",
+      "Uber Eats",
+      "Baltimore Banner",
+      "Facebook/Instagram"
+    ],
+    "has_existing_website": false,
+    "website_check_notes": "No standalone website found. Online presence is Facebook (kong.pocha), Instagram (kong.pocha), and third-party delivery/aggregator platforms only.",
+    "researched_at": "2026-06-04T11:14:07Z"
+  },
+  "review_log": [],
+  "deploy": {
+    "cloudflare_project_name": "endless-kong-pocha-columbia",
+    "last_deployed_url": null,
+    "deployed_at": null
+  }
+}
