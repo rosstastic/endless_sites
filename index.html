@@ -54,22 +54,17 @@
       box-shadow: 0 12px 40px rgba(0,0,0,.4);
     }
     .card__preview {
-      height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -.04em;
-      color: rgba(255,255,255,.15);
+      height: 180px;
       position: relative;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
     }
     .card__preview::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 40%, #1e293b);
+      background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(15,23,42,.7) 100%);
     }
     .card__body { padding: 1.25rem; }
     .card__category {
@@ -118,9 +113,7 @@
   <div class="grid">
 
     <a href="sites/namit-filipino-barbecue-columbia/index.html" class="card">
-      <div class="card__preview" style="background: linear-gradient(135deg, #2C3E50, #E67E22);">
-        NAMIT
-      </div>
+      <div class="card__preview" style="background-image: url('https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=600&q=80&fit=crop');"></div>
       <div class="card__body">
         <div class="card__category" style="color: #E67E22;">Restaurant</div>
         <div class="card__name">Namit Filipino Barbecue</div>
@@ -130,9 +123,7 @@
     </a>
 
     <a href="sites/merriweather-cafe-deli-columbia/index.html" class="card">
-      <div class="card__preview" style="background: linear-gradient(135deg, #3E2723, #D4A853);">
-        MCD
-      </div>
+      <div class="card__preview" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&fit=crop');"></div>
       <div class="card__body">
         <div class="card__category" style="color: #D4A853;">Cafe &amp; Deli</div>
         <div class="card__name">Merriweather Cafe &amp; Deli</div>
@@ -142,9 +133,7 @@
     </a>
 
     <a href="sites/columbia-nails-hickory-ridge/index.html" class="card">
-      <div class="card__preview" style="background: linear-gradient(135deg, #7D3C98, #F8C8D4);">
-        CN
-      </div>
+      <div class="card__preview" style="background-image: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&fit=crop');"></div>
       <div class="card__body">
         <div class="card__category" style="color: #c084fc;">Nail Salon</div>
         <div class="card__name">Columbia Nails</div>
@@ -154,9 +143,7 @@
     </a>
 
     <a href="sites/kong-pocha-columbia/index.html" class="card">
-      <div class="card__preview" style="background: linear-gradient(135deg, #0f172a, #dc2626);">
-        KP
-      </div>
+      <div class="card__preview" style="background-image: url('https://images.unsplash.com/ebNZJGWd4zY?w=600&q=80&fit=crop');"></div>
       <div class="card__body">
         <div class="card__category" style="color: #f87171;">Korean Restaurant</div>
         <div class="card__name">Kong Pocha</div>
@@ -166,9 +153,7 @@
     </a>
 
     <a href="sites/el-gran-sabor-columbia/index.html" class="card">
-      <div class="card__preview" style="background: linear-gradient(135deg, #7c2d12, #f97316);">
-        EGS
-      </div>
+      <div class="card__preview" style="background-image: url('https://images.unsplash.com/cYHbHxVCwDs?w=600&q=80&fit=crop');"></div>
       <div class="card__body">
         <div class="card__category" style="color: #fb923c;">Salvadoran Cafe</div>
         <div class="card__name">El Gran Sabor</div>
